@@ -301,6 +301,391 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h1><p>DOM对象也是一个标准的对象，原型链比较长</p>
+<p>HTMLSpanElements&gt;HTMLElement&gt;Element&gt;Node&gt;EventTarget&gt;Object</p>
+<h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><ul>
+<li>所有的函数都是Function的实例</li>
+<li>Function也是一个函数</li>
+</ul>
+<p>通过以上两条所以有以下结论，Fuction是自己的实例是自己的构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype===<span class="built_in">Function</span>.__proto__);<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>Function.prototype.<strong>proto</strong>指向Object的原型。</p>
+<h1 id="函数的三种角色"><a href="#函数的三种角色" class="headerlink" title="函数的三种角色"></a>函数的三种角色</h1><ul>
+<li>构造函数</li>
+<li>普通函数</li>
+<li>函数作为对象 </li>
+</ul>
+<p>函数到底是什么角色取决于调用方式。</p>
+<ul>
+<li>new foo() 构造函数</li>
+<li>foo() 普通函数 prototype属性就没什么用</li>
+<li>foo.info=”haha” 对象</li>
+</ul>
+<p>函数都是对象，但是对象不一定是函数</p>
+<h1 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h1><ol>
+<li>系统函数<br> 在不同的语言中名字可能不太一样，系统函数，类库，库函数等等。</li>
+<li><p>自定义函数</p>
+<ul>
+<li><p>函数声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>new Function()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fn1=<span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Function的参数中可以添加参数，最后一个参数写函数体，前面的参数写参数。</span></div></pre></td></tr></table></figure>
+<p>函数声明是在预解析阶段创建的，函数表达式是在代码执行阶段创建的。</p>
+<p>函数声明只能在全局或者函数内部定义，而函数表达式只能在表达式中，出现。</p>
+<h1 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h1><h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>调用函数的方法，函数中的this指向，取决于函数的调用方式。</p>
+</li>
+</ul>
+</li>
+<li>构造函数 new调用</li>
+<li>普通方式</li>
+<li>对象方法</li>
+<li>call apply<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2></li>
+</ol>
+<ul>
+<li>构造函数中的this指向实例对象</li>
+<li>原型方法中this指向实例</li>
+<li>非严格模式下，this指向window，严格模式下指向Undefined</li>
+<li>对象方法中，this就是方法的调用者。</li>
+<li>事件方法中的this指定的是绑定事件的对象。多数情况下是DOM</li>
+<li>定是函数中的this指向window</li>
+<li>call apply bind所调用的函数中的this，就是第第一参数，该参数必须是引用类型。</li>
+</ul>
+<p>ES5添加了bind特性，bind改变函数内部this的指向的时候不调用函数，bind会有一个返回值，返回改变之后的新函数。</p>
+<h1 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h1><ol>
+<li>作为参数的函数</li>
+<li>作为返回值的函数()</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (8)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (8)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (8)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (8)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
+<ul>
+<li>touchstart  手指触摸 不管几个手指</li>
+<li>touchmove  手指在滑动的时候</li>
+<li>touchend  手指离开屏幕</li>
+<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>事件参数有以下几个常用属性</p>
+<ul>
+<li>changedTouches 所有改变的触摸点集合</li>
+<li>targetTouches 目标元素上所有触摸点集合</li>
+<li>touches  所有触摸点    </li>
+<li>集合内的对象内的三组坐标<ul>
+<li>client   视口的坐标    </li>
+<li>page 页面的坐标</li>
+<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>没有滑动过</li>
+<li>150ms内响应</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (10)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -495,7 +880,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/day1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lee move">
@@ -514,7 +899,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/03/21/day1/" itemprop="url">草稿</a></h1>
+                <a class="post-title-link" href="/2016/03/21/笔记 (2)/" itemprop="url">草稿</a></h1>
         
 
         <div class="post-meta">
@@ -567,9 +952,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/03/21/day1/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/21/笔记 (2)/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/day1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2016/03/21/笔记 (2)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -599,21 +984,16 @@
       
         
           
-            <h1 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h1><p>没了好多，手滑删掉了</p>
-<h2 id="实例和data"><a href="#实例和data" class="headerlink" title="实例和data"></a>实例和data</h2><p>实例会代理data</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line">vm.a === data.a <span class="comment">// -&gt; true</span></div><div class="line"><span class="comment">// 设置属性也会影响到原始数据</span></div><div class="line">vm.a = <span class="number">2</span></div><div class="line">data.a <span class="comment">// -&gt; 2</span></div><div class="line"><span class="comment">// ... 反之亦然</span></div><div class="line">data.a = <span class="number">3</span></div><div class="line">vm.a <span class="comment">// -&gt; 3</span></div></pre></td></tr></table></figure>
-<p>Vue实例中也暴露的一些方法，为了防止变量命名冲突，所有暴露的属性方法都用$开头</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#example'</span>,</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.$data === data <span class="comment">// -&gt; true</span></div><div class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// -&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// $watch 是一个实例方法</span></div><div class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</div><div class="line">  <span class="comment">// 这个回调将在 `vm.a`  改变后调用</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="实例化的生命周期。"><a href="#实例化的生命周期。" class="headerlink" title="实例化的生命周期。"></a>实例化的生命周期。</h2><p>一个Vue在被实例化的过程为了方便管理，分成不同的周期，同时插入了回调函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    a: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// `this` 指向 vm 实例</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'a is: '</span> + <span class="keyword">this</span>.a)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// -&gt; "a is: 1"</span></div></pre></td></tr></table></figure>
-<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><p>可以使用最常见的语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">也可以使用v-once 指令，来设置插值，他的值不会随着改变。但是这样会影响一个节点的其他的数据绑定。//目前不知道影响在什么地方</div><div class="line"></div><div class="line">## html代码</div><div class="line"></div><div class="line">可以使用命令 v-html 来完成，但是要千万小心，小心XXS攻击。每个&#123;&#123;&#125;&#125;(绑定)中只能包含单个表达式，变量的声明，和流控制语句if都不会生效，要使用三元表达式。全局变量只能访问白名单中的变量，Math和Date等，不能使用用户自己的全局变量。</div><div class="line"></div><div class="line">## 指令</div><div class="line"></div><div class="line">- v-if 决定是否插入这个元素，根据绑定数据类型的布尔值来判断。</div><div class="line"></div><div class="line">### 含参数的指令</div><div class="line"></div><div class="line">有的指令需要配合参数来使用比如</div><div class="line"></div><div class="line">- ```v-bind:href=&quot;url&quot;```把标签的href属性绑定到数据url上。</div><div class="line"></div><div class="line">- ```v-on:click=&quot;do&quot;```这里的do是函数，会在元素click事件触发时候被调用。</div><div class="line"></div><div class="line">### 修饰符</div><div class="line">- ```&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;```修饰符在参数之后，.prevent表示对阻止事件的默认行为。</div><div class="line">### 过滤器</div><div class="line">Vue允许自定义过滤器，可以操作一些文本。用跟在管道符后面，过滤器可以用在v-bind中或者胡子中。</div><div class="line">过滤器也可以接受参数，但是第一个参数被设定为管道符之前的文本数据，在调用时传入的参数将会作为第二个参数开始，过滤器也可以进行嵌套。</div><div class="line">过滤器在app中使用filters属性定义。</div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot; &gt;</div><div class="line">   &lt;span &gt;&#123;&#123; message | capUp&#125;&#125;&lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var vm=new Vue(&#123;</div><div class="line">            el:&apos;#app&apos;,</div><div class="line">            data:&#123;</div><div class="line">                message:&quot;hello&quot;</div><div class="line">            &#125;,</div><div class="line">            filters:&#123;</div><div class="line">                capUp: function (value) &#123;</div><div class="line">                    value=value.toString();</div><div class="line">                    var str=value.charAt(0).toUpperCase()+value.slice(1);</div><div class="line">                    console.dir(str);</div><div class="line">                    return str;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><p>为了简化使用，将最常用的两个命令v-bind和v-on设置了简写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h1><p>有的属性需要很复杂的操作才能写入网页，当这些逻辑都写在模板引擎中的时候，会变得非常难以维护，所以抽离除了属性计算这个功能。<br>计算函数声明在computed属性中，在模板引擎中可以当做字符串调用，并且如果依赖其他的数据，在其他的数据更新的时候，这个数据也会被更新。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> &gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;  remessage&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"message"</span>   <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">     <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">         el:<span class="string">'#app'</span>,</span></div><div class="line"><span class="undefined">         data:&#123;</span></div><div class="line"><span class="javascript">             message:<span class="string">"我为什么总要被反过来"</span></span></div><div class="line"><span class="undefined">         &#125;,</span></div><div class="line"><span class="undefined">         computed:&#123;</span></div><div class="line"><span class="javascript">             remessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">               <span class="keyword">return</span>  <span class="keyword">this</span>.message.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>);</span></div><div class="line"><span class="undefined">             &#125;</span></div><div class="line"><span class="undefined">         &#125;</span></div><div class="line"><span class="undefined">     &#125;);</span></div><div class="line"><span class="undefined"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这个功能会实现到修改文本框的内容时，正序倒叙的内容都改变。</p>
-<h2 id="计算属性的缓存"><a href="#计算属性的缓存" class="headerlink" title="计算属性的缓存"></a>计算属性的缓存</h2><p>计算属性是存在缓存机制的，并不是每一次重新渲染都要执行计算缓存的函数，当依赖的数据没有发生改变的时候，是不会执行这个函数的。</p>
-<h2 id="计算属性的-get-和set"><a href="#计算属性的-get-和set" class="headerlink" title="计算属性的 get 和set"></a>计算属性的 get 和set</h2><p>计算属性平时默认只有get，但是也可以设置set<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">computed: &#123;</div><div class="line">  fullName: &#123;</div><div class="line">    <span class="comment">// getter</span></div><div class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// setter</span></div><div class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</div><div class="line">      <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</div><div class="line">      <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
-<p>当执行vm.fullname=”‘时set函数将会被调用，那两个值也将会被更新。</p>
-<h2 id="观察者watcher"><a href="#观察者watcher" class="headerlink" title="观察者watcher"></a>观察者watcher</h2><p>watcher也能观察到数据的改动，但是相比于计算属性，更适合执行异步操作，或者开销较大的操作。</p>
+            <h1 id="反馈反馈反馈反馈"><a href="#反馈反馈反馈反馈" class="headerlink" title="反馈反馈反馈反馈"></a>反馈反馈反馈反馈</h1><h2 id="对象对象对象对象"><a href="#对象对象对象对象" class="headerlink" title="对象对象对象对象"></a>对象对象对象对象</h2><ul>
+<li>本地对象 独立于宿主环境的对象  (独立于浏览器的对象，没有浏览器也会有的对象 Array String Date Number Boolean RegExp Function Object Error) </li>
+<li>内置对象 Math Global (global 在浏览器中是window)</li>
+<li>宿主对象 浏览器提供的对象 DOM对象 BOM对象 自定义对象<h1 id="类数组"><a href="#类数组" class="headerlink" title="类数组"></a>类数组</h1>delete 删除对象的属性<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">23123</span>,<span class="number">1421</span>,<span class="number">123</span>;</div><div class="line"><span class="keyword">delete</span> arr[<span class="number">0</span>];<span class="comment">//第一个元素就会被删除</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>使用delete删除全局变量的时候，只能删除没有var声明的变量。</p>
+<p>数组也是一个对象，可以向数组添加属性，当添加数值为索引的属性的时候，会改变数组的长度，数组的长度根据最后一个索引为数字的元素计算。</p>
+<p>类数组就是模仿数组，也设置索引为数字，有length的属性。但是类数组是无法使用数组的方法的。为了使用数组的方法，我们可以把类数组转换成数组，通过slice方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">    <span class="number">0</span>:<span class="number">0</span>,</div><div class="line">    <span class="number">1</span>:<span class="number">1</span>,</div><div class="line">    <span class="number">2</span>,<span class="number">2</span>,</div><div class="line">    length:<span class="number">3</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">Array</span>.prototype.slice.apply(obj,<span class="number">0</span>);</div></pre></td></tr></table></figure></p>
+<p>注意obj中的length会影响apply方法的转化。</p>
 
           
         
@@ -662,7 +1042,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/day6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (9)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lee move">
@@ -681,7 +1061,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/03/21/day6/" itemprop="url">草稿</a></h1>
+                <a class="post-title-link" href="/2016/03/21/笔记 (9)/" itemprop="url">草稿</a></h1>
         
 
         <div class="post-meta">
@@ -734,9 +1114,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/03/21/day6/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/21/笔记 (9)/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/day6/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2016/03/21/笔记 (9)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -766,227 +1146,40 @@
       
         
           
-            <h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><p>实例化一个最简单的app</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app=<span class="keyword">new</span> Vue(&#123;</div><div class="line">       el:<span class="string">"#app"</span>,</div><div class="line">       data:&#123;</div><div class="line">           message:<span class="string">"Helloe Vue!"</span>+<span class="keyword">new</span> <span class="built_in">Date</span>(),</div><div class="line">           lorem:<span class="string">'nihenpi'</span></div><div class="line">       &#125;</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
-<p>el 代表选择器，把app制定到具体的dom元素，data代表数据，通常使用在模板引擎等位置。</p>
-<h1 id="V指令"><a href="#V指令" class="headerlink" title="V指令"></a>V指令</h1><p>在一个标签内部定义一个自定义属性以v:开头，代表Vue指令。这个指令通常要对这个元素进行操作。</p>
-<h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><p>绑定操作，绑定元素的属性比如<figure class="highlight plain"><figcaption><span>绑定这个元素的title属性，绑定到app内部的message数据。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## v-if</div><div class="line"></div><div class="line">表示可视性，根据绑定数据的布尔值来判断当前元素是否显示。</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;span  v-if=&quot;seen&quot;&gt;</div><div class="line">            &#123;&#123; lorem&#125;&#125;</div><div class="line">            &lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                seen:true,</div><div class="line">                lorem:&quot;我要隐藏了&quot;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>当你在控制台输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## v-for</div><div class="line"></div><div class="line">用于模板引擎，类似每次都会循环标签内的模板引擎进行输出</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;span  v-for=&quot;todo in TODOList&quot;&gt;</div><div class="line">            &#123;&#123; todo &#125;&#125;</div><div class="line">            &lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                TODOList:[&quot;hahahah&quot;,&quot;hehehehehe&quot;,&quot;hohohohoho&quot;]</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>网页上将会显示数组中的内容hahahah hehehehehe hohohohoho。</p>
-<h2 id="v-on事件监听"><a href="#v-on事件监听" class="headerlink" title="v-on事件监听"></a>v-on事件监听</h2><p>可以给对应的元素设置事件，配合数据的绑定使用非常厉害。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">span</span>&gt;</span> </div><div class="line">          &#123;&#123;message&#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"一发逆转！"</span> <span class="attr">v-on:click</span>=<span class="string">"resever"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">       <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">           el: <span class="string">"#app"</span>,</span></div><div class="line"><span class="undefined">           data: &#123;</span></div><div class="line"><span class="javascript">               message: <span class="string">"我真是日了狗了"</span></span></div><div class="line"><span class="undefined">           &#125;,</span></div><div class="line"><span class="undefined">           methods: &#123;</span></div><div class="line"><span class="javascript">               resever: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">                   <span class="keyword">this</span>.message=<span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">""</span>);</span></div><div class="line"><span class="undefined">               &#125;</span></div><div class="line"><span class="undefined">           &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">       &#125;)</span></div><div class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这样当点击按钮的时候，span标签内的文字也会跟着改变。</p>
-<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>可以给表单设置，把表单的value和数据进行绑定</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span> </div><div class="line">       &#123;&#123;message&#125;&#125;</div><div class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">v-model</span>=<span class="string">"message"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">        el: <span class="string">"#app"</span>,</span></div><div class="line"><span class="undefined">        data: &#123;</span></div><div class="line"><span class="javascript">            message: <span class="string">"我真是日了狗了"</span></span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;)</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/21/笔记/" itemprop="url">草稿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
-                2016-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/rubbish/" itemprop="url" rel="index">
-                    <span itemprop="name">rubbish</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/21/笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/笔记/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h1><p>DOM对象也是一个标准的对象，原型链比较长</p>
-<p>HTMLSpanElements&gt;HTMLElement&gt;Element&gt;Node&gt;EventTarget&gt;Object</p>
-<h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><ul>
-<li>所有的函数都是Function的实例</li>
-<li>Function也是一个函数</li>
-</ul>
-<p>通过以上两条所以有以下结论，Fuction是自己的实例是自己的构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype===<span class="built_in">Function</span>.__proto__);<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
-<p>Function.prototype.<strong>proto</strong>指向Object的原型。</p>
-<h1 id="函数的三种角色"><a href="#函数的三种角色" class="headerlink" title="函数的三种角色"></a>函数的三种角色</h1><ul>
-<li>构造函数</li>
-<li>普通函数</li>
-<li>函数作为对象 </li>
-</ul>
-<p>函数到底是什么角色取决于调用方式。</p>
-<ul>
-<li>new foo() 构造函数</li>
-<li>foo() 普通函数 prototype属性就没什么用</li>
-<li>foo.info=”haha” 对象</li>
-</ul>
-<p>函数都是对象，但是对象不一定是函数</p>
-<h1 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h1><ol>
-<li>系统函数<br> 在不同的语言中名字可能不太一样，系统函数，类库，库函数等等。</li>
-<li><p>自定义函数</p>
-<ul>
-<li><p>函数声明</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+            <h1 id="移动web开发第一天"><a href="#移动web开发第一天" class="headerlink" title="移动web开发第一天"></a>移动web开发第一天</h1><h2 id="移动端开发已经是必备技能"><a href="#移动端开发已经是必备技能" class="headerlink" title="移动端开发已经是必备技能"></a>移动端开发已经是必备技能</h2><p>移动端推进了H5的推广，手机浏览器，目前移动端浏览网页已经超过了PC端的访问，所以很重要。</p>
+<h2 id="移动端兼容性比较好"><a href="#移动端兼容性比较好" class="headerlink" title="移动端兼容性比较好"></a>移动端兼容性比较好</h2><p>移动端的浏览器，一般都版本较新。尤其是国内基本都是基于webkit内核，C3的属性一般需要些私有前缀-webkit-。</p>
+<h2 id="移动适配问题"><a href="#移动适配问题" class="headerlink" title="移动适配问题"></a>移动适配问题</h2><p>移动端需要考虑适配的问题，移动端的屏幕大小不一，不能像PC端一样设置版心。<br>京东移动端项目采用百分比自适应布局，流式布局另外需要配置viewport。</p>
+<h2 id="流式布局"><a href="#流式布局" class="headerlink" title="流式布局"></a>流式布局</h2><p>就是不使用固定像素布局</p>
+<h2 id="viewport-视觉窗口"><a href="#viewport-视觉窗口" class="headerlink" title="viewport 视觉窗口"></a>viewport 视觉窗口</h2><p>用来承载网页，只在移动端才会有。</p>
+<p>浏览器&gt;viewport&gt;网页</p>
+<h2 id="标准的移动端开发要求-viewport"><a href="#标准的移动端开发要求-viewport" class="headerlink" title="标准的移动端开发要求(viewport)"></a>标准的移动端开发要求(viewport)</h2><ul>
+<li><p>不能出现横向滚动条 （也可以认为是网页的宽度和浏览器的宽度一致）</p>
 </li>
-<li><p>函数表达式</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+<li><p>缩放的比例和PC端保持一致</p>
 </li>
-<li><p>new Function()</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fn1=<span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Function的参数中可以添加参数，最后一个参数写函数体，前面的参数写参数。</span></div></pre></td></tr></table></figure>
-<p>函数声明是在预解析阶段创建的，函数表达式是在代码执行阶段创建的。</p>
-<p>函数声明只能在全局或者函数内部定义，而函数表达式只能在表达式中，出现。</p>
-<h1 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h1><h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>调用函数的方法，函数中的this指向，取决于函数的调用方式。</p>
+<li><p>不允许页面自行缩放</p>
 </li>
 </ul>
+<h3 id="怎么设置viewport"><a href="#怎么设置viewport" class="headerlink" title="怎么设置viewport"></a>怎么设置viewport</h3><p>在header里面meta标签 name=viewport</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot;&gt;</div></pre></td></tr></table></figure>
+<h3 id="viewport-用那些属性"><a href="#viewport-用那些属性" class="headerlink" title="viewport 用那些属性"></a>viewport 用那些属性</h3><ul>
+<li><p>width 设置视口的宽度单位默认px</p>
+<p>设置当前视口宽度为当前设备宽度<code>content=&quot;device-width</code></p>
 </li>
-<li>构造函数 new调用</li>
-<li>普通方式</li>
-<li>对象方法</li>
-<li>call apply<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2></li>
-</ol>
-<ul>
-<li>构造函数中的this指向实例对象</li>
-<li>原型方法中this指向实例</li>
-<li>非严格模式下，this指向window，严格模式下指向Undefined</li>
-<li>对象方法中，this就是方法的调用者。</li>
-<li>事件方法中的this指定的是绑定事件的对象。多数情况下是DOM</li>
-<li>定是函数中的this指向window</li>
-<li>call apply bind所调用的函数中的this，就是第第一参数，该参数必须是引用类型。</li>
+<li><p>height 设置视口的高度单位默认px</p>
+</li>
+<li><p>initial-scale 默认初始缩放比例<code>content=&quot;inital-scale=1&quot;</code></p>
+</li>
+<li><p>user-scalable 是否允许用户自己缩放 可以设置成yes no 1 0默认是可以缩放(yes 1)</p>
+<p>如果设置多个属性参数 那么用逗号隔开就可以 也可以用快捷语法<code>meta:vp</code>来实现标准化设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width inital-scale=1 user-scalable=no&quot; &gt;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>ES5添加了bind特性，bind改变函数内部this的指向的时候不调用函数，bind会有一个返回值，返回改变之后的新函数。</p>
-<h1 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h1><ol>
-<li>作为参数的函数</li>
-<li>作为返回值的函数()</li>
-</ol>
+<p>淘宝的viewport中设置了缩放，来解决高清屏幕的设备中图标失真的方法。</p>
+<p>在京东项目中，会将背景图片单独进行压缩 来实现目的</p>
+<h2 id="移动端的容器宽度"><a href="#移动端的容器宽度" class="headerlink" title="移动端的容器宽度"></a>移动端的容器宽度</h2><p>目前一般常用的主流的设计稿容器宽度一种是640 iphone4,另外一种是iphone6的750</p>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h3 id="图片的下间隙"><a href="#图片的下间隙" class="headerlink" title="图片的下间隙"></a>图片的下间隙</h3><p>间隙的大小和字体的大小有关系x的下面两个脚就是基线(baseline)，图片会和他对齐，系统会预留y比x长的一块(yx) 也就会产生间隙。</p>
+<p>   font-size:0 ,vertical align,   display:block,</p>
 
           
         
@@ -1836,182 +2029,6 @@
 <li>`col-xs-push-1 往右推 pull是拉</li>
 <li>visible-lg 大屏显示</li>
 <li>hidden-lg 大屏隐藏<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3>自定义字体/字体图标</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (8)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/21/笔记 (8)/" itemprop="url">草稿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
-                2016-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/rubbish/" itemprop="url" rel="index">
-                    <span itemprop="name">rubbish</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/21/笔记 (8)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/笔记 (8)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
-<ul>
-<li>touchstart  手指触摸 不管几个手指</li>
-<li>touchmove  手指在滑动的时候</li>
-<li>touchend  手指离开屏幕</li>
-<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>事件参数有以下几个常用属性</p>
-<ul>
-<li>changedTouches 所有改变的触摸点集合</li>
-<li>targetTouches 目标元素上所有触摸点集合</li>
-<li>touches  所有触摸点    </li>
-<li>集合内的对象内的三组坐标<ul>
-<li>client   视口的坐标    </li>
-<li>page 页面的坐标</li>
-<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>没有滑动过</li>
-<li>150ms内响应</li>
 </ol>
 
           

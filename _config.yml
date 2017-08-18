@@ -77,7 +77,14 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: 45.78.35.16
+  user: root
+  root: /usr/share/nginx/html/blog-source/public
+  port: 29709
+  delete: true
+  verbose: true
+  ignore_errors: false
 
 search:
   path: search.xml
