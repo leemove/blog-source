@@ -1,0 +1,2692 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="小前端,Vue,Angular,Ionic.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小木屋">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="小木屋">
+<meta property="og:description" content="小前端,Vue,Angular,Ionic.">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小木屋">
+<meta name="twitter:description" content="小前端,Vue,Angular,Ionic.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/4/"/>
+
+
+
+
+
+  <title>小木屋</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7994a7e3e0af3de6dd91d1ff3b204c5d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小木屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">代码复制员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (10)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (10)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (10)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (10)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="衍生的小问题"><a href="#衍生的小问题" class="headerlink" title="衍生的小问题"></a>衍生的小问题</h1><h2 id="对象的比较"><a href="#对象的比较" class="headerlink" title="对象的比较=="></a>对象的比较==</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(!![]);<span class="comment">//ture</span></div><div class="line"><span class="built_in">console</span>.log([]==<span class="literal">false</span>);<span class="comment">//ture</span></div></pre></td></tr></table></figure>
+<p>看似上面两条语句是矛盾的，[]单独转换成布尔值的时候是true，为什么和false比较的时候就是false了？？？？<br>事实上，空数组和布尔值进行比较的时候会将两者都转成数字在进行比较，也就是说实际执行的是以下的代码。</p>
+<p>ture—&gt;1</p>
+<p>false–&gt;0</p>
+<p>[]—-&gt;0<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>([].toString())==<span class="literal">false</span>);</div><div class="line"><span class="comment">//0==0</span></div></pre></td></tr></table></figure></p>
+<p>对象和布尔值的比较会把对象转换成字符串，再转化成数字进行比较(value of) 有些方法会使用toString(如日期对象)，自定义的类会使用toString。[]转字符串转数字是0 。{}转换成字符串是字母，转成数字是NaN。</p>
+<h2 id="window和变量的提升"><a href="#window和变量的提升" class="headerlink" title="window和变量的提升"></a>window和变量的提升</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="string">'a'</span> <span class="keyword">in</span> <span class="built_in">window</span>)&#123;</div><div class="line">     a=<span class="number">123</span>;</div><div class="line">    <span class="built_in">console</span>.log(a)</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="literal">false</span>);<span class="comment">//false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>虽然在作用域内给a赋值，但是没有var，a不会被预解析。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>( a <span class="keyword">in</span> <span class="built_in">window</span>)&#123;</div><div class="line">     <span class="keyword">var</span> a=<span class="number">123</span>;</div><div class="line">     <span class="built_in">console</span>.log(a) <span class="comment">//123</span></div><div class="line"> &#125;<span class="keyword">else</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="literal">false</span>)</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码去掉判断语句中的单引号后会打印123。这是因为a被预解析，但判断语句执行时并没有被赋值，判断语句中失去了双引号a是一个值为undefined的变量。而window中是存在undefined这个属性的。所以会执行条件里的语句。</p>
+<p>在早起的浏览器中，window.undefined的值undefined是可以被修改的，这会产生很多的其他问题。在jquery中为了解决这个问题使用了以下的方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">a,undefined</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;)(<span class="number">123</span>);</div></pre></td></tr></table></figure></p>
+<p>指定了许多参数的函数，最后一个形参是undefined，而没有传入这个实参。这样在函数内部使用undefined的时候会使用未被定义的参数，屏蔽了全局变量Undefined。</p>
+<h1 id="复习-构造函数-实例对象，原型之间的关系。"><a href="#复习-构造函数-实例对象，原型之间的关系。" class="headerlink" title="复习 构造函数,实例对象，原型之间的关系。"></a>复习 构造函数,实例对象，原型之间的关系。</h1><ol>
+<li>构造函数中都有原型属性prototype,改属性本质也是一个对象。</li>
+<li>原型对象中都有一个属性constructor，指向构造函数.</li>
+<li>实例中都有一个属性<strong>prototype</strong>,该属性不是标准属性，不可以在编程中使用，是给浏览器自己使用的，该属性指向原型对象，和构造函数中的prototype指向一个同一个地址。</li>
+<li>protoType <strong>proto</strong>指向同一个位置，但是存在位置不同，protoType存在在构造函数中，<strong>proto</strong>存在在实例化对象中。<h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>实例对象和原型对象形成的链式结构,链式通过<strong>proto</strong>来链接。</li>
+</ol>
+<p>起点是一个实例化对象，最终的重点是object的<strong>proto</strong>是null。<br>数组的原型链:</p>
+<p><code>arr--&gt;Array.protoType--&gt;Object.protoType--&gt;null;</code></p>
+<h2 id="操作原型链"><a href="#操作原型链" class="headerlink" title="操作原型链"></a>操作原型链</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 　<span class="title">Foo1</span>(<span class="params">info</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.info = info;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> 　<span class="title">Foo2</span>(<span class="params">info</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.info = info;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> 　<span class="title">Foo3</span>(<span class="params">info</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.info = info;</div><div class="line">&#125;</div><div class="line">Foo2.prototype=<span class="keyword">new</span> Foo1(<span class="string">"Tom"</span>);</div><div class="line"><span class="comment">//这里要注意顺序!!!!</span></div><div class="line">Foo3.prototype=<span class="keyword">new</span> Foo2(<span class="string">"jerry"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> foo3=<span class="keyword">new</span> Foo3(<span class="string">"dog"</span>);</div><div class="line"><span class="built_in">console</span>.dir(foo3);</div></pre></td></tr></table></figure>
+<p>原型链变成了 foo3–&gt;foo2—&gt;foo1—&gt;object。</p>
+<p>通过重置原型对象的方式来修改原型链。这样修改原型链会丢失construtor属性，因为实例化对象中，并没有这个属性，这个属性只存在在构造函数的原型中。</p>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h2><p>就是上述的方法，让一个构造函数的原型指向一个实例。有以下几个缺点。</p>
+<ul>
+<li>没有办法给直接继承过来的属性赋值。</li>
+<li>继承过来的引用类型的数据，所有实例都是共享的。<h2 id="借用构造函数继承"><a href="#借用构造函数继承" class="headerlink" title="借用构造函数继承"></a>借用构造函数继承</h2></li>
+</ul>
+<p>改变this的方法，call,和apply方法，第一个参数是要改变的this，如果this是null则不会改变。</p>
+<p>call函数可以有多个参数，第一个参数是this的指向，后面的参数传入原函数的参数</p>
+<p>apply函数可以有两个参数，第一个也是this的指向，后面需要传入一个数组，数组里面是函数的参数。</p>
+<hr>
+<p>了解以上知识后可以使用以下的代码来声明构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animall</span>(<span class="params">name,voice</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(voice);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> voice=<span class="string">"dddd"</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">color,name,voice</span>)</span>&#123;</div><div class="line">    <span class="comment">//这里将Animal的构造函数指针改成了Cat类的this</span></div><div class="line">    Animall.call(<span class="keyword">this</span>,name,voice)</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在子类，子构造函数Cat中借用了Animall的函数内容，相当于给给自己添加了属性。同理call可以换成apply类似。这里的Animall相当于一个普通的函数，没有new。</p>
+<p>这个方法完美解决了以上两个问题。但是也产生了新的问题，没有继承父级构造函数<strong>原型</strong>上的成员。</p>
+<h2 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animall</span>(<span class="params">name,voice</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name=name;</div><div class="line">    <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(voice);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> voice=<span class="string">"dddd"</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">color,name,voice</span>)</span>&#123;</div><div class="line">    <span class="comment">//这里将Animal的构造函数指针改成了Cat类的this</span></div><div class="line">    Animall.call(<span class="keyword">this</span>,name,voice)</div><div class="line">    <span class="keyword">this</span>.color=color;</div><div class="line">&#125;</div><div class="line">Cat.prototype=<span class="keyword">new</span> Animall();<span class="comment">//这里将原型链链接到Cat上</span></div></pre></td></tr></table></figure>
+<p>这种方法是以上两种方法的混合，解决了许多的缺点。</p>
+<hr>
+<p>不一定正确的总结，构造函数中属性的开头一般是this.，私有属性，不能直接访问的属性的开头是var，共有的属性和方法放在原型中。</p>
+<h1 id="ES5-Object-create方法"><a href="#ES5-Object-create方法" class="headerlink" title="ES5 Object.create方法"></a>ES5 Object.create方法</h1><p>这个方法是一个ES5的新特性，在版本老旧的浏览器中可能不兼容，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj=Object.create(null);</div><div class="line">var o1=&#123;</div><div class="line">    name:lee;</div><div class="line">&#125;</div><div class="line">var o2=Object.create(o1);</div></pre></td></tr></table></figure></p>
+<p>obj这种形式被创建的对象什么都不会有，<strong>proto</strong>也没有。o2被创建之后，会将<strong>proto</strong>指向o1。<br>实际上函数内部相当于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Object.protoType.create=function(obj)&#123;</div><div class="line">    function Foo()&#123;&#125;</div><div class="line">    foo.protoType=obj;</div><div class="line">    return new Foo();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="属性的复制"><a href="#属性的复制" class="headerlink" title="属性的复制"></a>属性的复制</h1><p>一般把forin封装成函数，在使用这个方案时，如果原属性已经存在会被覆盖，不存在将会进行赋值。如果存在嵌套关系，可能会覆盖内层没有修改的数据。</p>
+<p>$中的extend方法可以进行拷贝方式,第一个参数不如不写，是浅拷贝，只会修改最外面一层，如果true会进行深度拷贝，所有层都会被修改。第二个参数是可以修改的属性，所有的后续参数都会逐一合并到第二个参数。  (用递归编写)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/day1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/day1/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/day1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/day1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h1><p>没了好多，手滑删掉了</p>
+<h2 id="实例和data"><a href="#实例和data" class="headerlink" title="实例和data"></a>实例和data</h2><p>实例会代理data</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line">vm.a === data.a <span class="comment">// -&gt; true</span></div><div class="line"><span class="comment">// 设置属性也会影响到原始数据</span></div><div class="line">vm.a = <span class="number">2</span></div><div class="line">data.a <span class="comment">// -&gt; 2</span></div><div class="line"><span class="comment">// ... 反之亦然</span></div><div class="line">data.a = <span class="number">3</span></div><div class="line">vm.a <span class="comment">// -&gt; 3</span></div></pre></td></tr></table></figure>
+<p>Vue实例中也暴露的一些方法，为了防止变量命名冲突，所有暴露的属性方法都用$开头</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#example'</span>,</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.$data === data <span class="comment">// -&gt; true</span></div><div class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// -&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// $watch 是一个实例方法</span></div><div class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</div><div class="line">  <span class="comment">// 这个回调将在 `vm.a`  改变后调用</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="实例化的生命周期。"><a href="#实例化的生命周期。" class="headerlink" title="实例化的生命周期。"></a>实例化的生命周期。</h2><p>一个Vue在被实例化的过程为了方便管理，分成不同的周期，同时插入了回调函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    a: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// `this` 指向 vm 实例</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'a is: '</span> + <span class="keyword">this</span>.a)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// -&gt; "a is: 1"</span></div></pre></td></tr></table></figure>
+<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><p>可以使用最常见的语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">也可以使用v-once 指令，来设置插值，他的值不会随着改变。但是这样会影响一个节点的其他的数据绑定。//目前不知道影响在什么地方</div><div class="line"></div><div class="line">## html代码</div><div class="line"></div><div class="line">可以使用命令 v-html 来完成，但是要千万小心，小心XXS攻击。每个&#123;&#123;&#125;&#125;(绑定)中只能包含单个表达式，变量的声明，和流控制语句if都不会生效，要使用三元表达式。全局变量只能访问白名单中的变量，Math和Date等，不能使用用户自己的全局变量。</div><div class="line"></div><div class="line">## 指令</div><div class="line"></div><div class="line">- v-if 决定是否插入这个元素，根据绑定数据类型的布尔值来判断。</div><div class="line"></div><div class="line">### 含参数的指令</div><div class="line"></div><div class="line">有的指令需要配合参数来使用比如</div><div class="line"></div><div class="line">- ```v-bind:href=&quot;url&quot;```把标签的href属性绑定到数据url上。</div><div class="line"></div><div class="line">- ```v-on:click=&quot;do&quot;```这里的do是函数，会在元素click事件触发时候被调用。</div><div class="line"></div><div class="line">### 修饰符</div><div class="line">- ```&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;```修饰符在参数之后，.prevent表示对阻止事件的默认行为。</div><div class="line">### 过滤器</div><div class="line">Vue允许自定义过滤器，可以操作一些文本。用跟在管道符后面，过滤器可以用在v-bind中或者胡子中。</div><div class="line">过滤器也可以接受参数，但是第一个参数被设定为管道符之前的文本数据，在调用时传入的参数将会作为第二个参数开始，过滤器也可以进行嵌套。</div><div class="line">过滤器在app中使用filters属性定义。</div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot; &gt;</div><div class="line">   &lt;span &gt;&#123;&#123; message | capUp&#125;&#125;&lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var vm=new Vue(&#123;</div><div class="line">            el:&apos;#app&apos;,</div><div class="line">            data:&#123;</div><div class="line">                message:&quot;hello&quot;</div><div class="line">            &#125;,</div><div class="line">            filters:&#123;</div><div class="line">                capUp: function (value) &#123;</div><div class="line">                    value=value.toString();</div><div class="line">                    var str=value.charAt(0).toUpperCase()+value.slice(1);</div><div class="line">                    console.dir(str);</div><div class="line">                    return str;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><p>为了简化使用，将最常用的两个命令v-bind和v-on设置了简写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h1><p>有的属性需要很复杂的操作才能写入网页，当这些逻辑都写在模板引擎中的时候，会变得非常难以维护，所以抽离除了属性计算这个功能。<br>计算函数声明在computed属性中，在模板引擎中可以当做字符串调用，并且如果依赖其他的数据，在其他的数据更新的时候，这个数据也会被更新。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> &gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;  remessage&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"message"</span>   <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">     <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">         el:<span class="string">'#app'</span>,</span></div><div class="line"><span class="undefined">         data:&#123;</span></div><div class="line"><span class="javascript">             message:<span class="string">"我为什么总要被反过来"</span></span></div><div class="line"><span class="undefined">         &#125;,</span></div><div class="line"><span class="undefined">         computed:&#123;</span></div><div class="line"><span class="javascript">             remessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">               <span class="keyword">return</span>  <span class="keyword">this</span>.message.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>);</span></div><div class="line"><span class="undefined">             &#125;</span></div><div class="line"><span class="undefined">         &#125;</span></div><div class="line"><span class="undefined">     &#125;);</span></div><div class="line"><span class="undefined"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这个功能会实现到修改文本框的内容时，正序倒叙的内容都改变。</p>
+<h2 id="计算属性的缓存"><a href="#计算属性的缓存" class="headerlink" title="计算属性的缓存"></a>计算属性的缓存</h2><p>计算属性是存在缓存机制的，并不是每一次重新渲染都要执行计算缓存的函数，当依赖的数据没有发生改变的时候，是不会执行这个函数的。</p>
+<h2 id="计算属性的-get-和set"><a href="#计算属性的-get-和set" class="headerlink" title="计算属性的 get 和set"></a>计算属性的 get 和set</h2><p>计算属性平时默认只有get，但是也可以设置set<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">computed: &#123;</div><div class="line">  fullName: &#123;</div><div class="line">    <span class="comment">// getter</span></div><div class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// setter</span></div><div class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</div><div class="line">      <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</div><div class="line">      <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>当执行vm.fullname=”‘时set函数将会被调用，那两个值也将会被更新。</p>
+<h2 id="观察者watcher"><a href="#观察者watcher" class="headerlink" title="观察者watcher"></a>观察者watcher</h2><p>watcher也能观察到数据的改动，但是相比于计算属性，更适合执行异步操作，或者开销较大的操作。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/day6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/day6/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/day6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/day6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><p>实例化一个最简单的app</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app=<span class="keyword">new</span> Vue(&#123;</div><div class="line">       el:<span class="string">"#app"</span>,</div><div class="line">       data:&#123;</div><div class="line">           message:<span class="string">"Helloe Vue!"</span>+<span class="keyword">new</span> <span class="built_in">Date</span>(),</div><div class="line">           lorem:<span class="string">'nihenpi'</span></div><div class="line">       &#125;</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
+<p>el 代表选择器，把app制定到具体的dom元素，data代表数据，通常使用在模板引擎等位置。</p>
+<h1 id="V指令"><a href="#V指令" class="headerlink" title="V指令"></a>V指令</h1><p>在一个标签内部定义一个自定义属性以v:开头，代表Vue指令。这个指令通常要对这个元素进行操作。</p>
+<h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><p>绑定操作，绑定元素的属性比如<figure class="highlight plain"><figcaption><span>绑定这个元素的title属性，绑定到app内部的message数据。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## v-if</div><div class="line"></div><div class="line">表示可视性，根据绑定数据的布尔值来判断当前元素是否显示。</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;span  v-if=&quot;seen&quot;&gt;</div><div class="line">            &#123;&#123; lorem&#125;&#125;</div><div class="line">            &lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                seen:true,</div><div class="line">                lorem:&quot;我要隐藏了&quot;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>当你在控制台输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## v-for</div><div class="line"></div><div class="line">用于模板引擎，类似每次都会循环标签内的模板引擎进行输出</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;span  v-for=&quot;todo in TODOList&quot;&gt;</div><div class="line">            &#123;&#123; todo &#125;&#125;</div><div class="line">            &lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                TODOList:[&quot;hahahah&quot;,&quot;hehehehehe&quot;,&quot;hohohohoho&quot;]</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>网页上将会显示数组中的内容hahahah hehehehehe hohohohoho。</p>
+<h2 id="v-on事件监听"><a href="#v-on事件监听" class="headerlink" title="v-on事件监听"></a>v-on事件监听</h2><p>可以给对应的元素设置事件，配合数据的绑定使用非常厉害。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">span</span>&gt;</span> </div><div class="line">          &#123;&#123;message&#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"一发逆转！"</span> <span class="attr">v-on:click</span>=<span class="string">"resever"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">       <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">           el: <span class="string">"#app"</span>,</span></div><div class="line"><span class="undefined">           data: &#123;</span></div><div class="line"><span class="javascript">               message: <span class="string">"我真是日了狗了"</span></span></div><div class="line"><span class="undefined">           &#125;,</span></div><div class="line"><span class="undefined">           methods: &#123;</span></div><div class="line"><span class="javascript">               resever: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">                   <span class="keyword">this</span>.message=<span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">""</span>);</span></div><div class="line"><span class="undefined">               &#125;</span></div><div class="line"><span class="undefined">           &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">       &#125;)</span></div><div class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这样当点击按钮的时候，span标签内的文字也会跟着改变。</p>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>可以给表单设置，把表单的value和数据进行绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span> </div><div class="line">       &#123;&#123;message&#125;&#125;</div><div class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">v-model</span>=<span class="string">"message"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="javascript">        el: <span class="string">"#app"</span>,</span></div><div class="line"><span class="undefined">        data: &#123;</span></div><div class="line"><span class="javascript">            message: <span class="string">"我真是日了狗了"</span></span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;)</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h1><p>DOM对象也是一个标准的对象，原型链比较长</p>
+<p>HTMLSpanElements&gt;HTMLElement&gt;Element&gt;Node&gt;EventTarget&gt;Object</p>
+<h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><ul>
+<li>所有的函数都是Function的实例</li>
+<li>Function也是一个函数</li>
+</ul>
+<p>通过以上两条所以有以下结论，Fuction是自己的实例是自己的构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype===<span class="built_in">Function</span>.__proto__);<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>Function.prototype.<strong>proto</strong>指向Object的原型。</p>
+<h1 id="函数的三种角色"><a href="#函数的三种角色" class="headerlink" title="函数的三种角色"></a>函数的三种角色</h1><ul>
+<li>构造函数</li>
+<li>普通函数</li>
+<li>函数作为对象 </li>
+</ul>
+<p>函数到底是什么角色取决于调用方式。</p>
+<ul>
+<li>new foo() 构造函数</li>
+<li>foo() 普通函数 prototype属性就没什么用</li>
+<li>foo.info=”haha” 对象</li>
+</ul>
+<p>函数都是对象，但是对象不一定是函数</p>
+<h1 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h1><ol>
+<li>系统函数<br> 在不同的语言中名字可能不太一样，系统函数，类库，库函数等等。</li>
+<li><p>自定义函数</p>
+<ul>
+<li><p>函数声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>new Function()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fn1=<span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Function的参数中可以添加参数，最后一个参数写函数体，前面的参数写参数。</span></div></pre></td></tr></table></figure>
+<p>函数声明是在预解析阶段创建的，函数表达式是在代码执行阶段创建的。</p>
+<p>函数声明只能在全局或者函数内部定义，而函数表达式只能在表达式中，出现。</p>
+<h1 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h1><h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>调用函数的方法，函数中的this指向，取决于函数的调用方式。</p>
+</li>
+</ul>
+</li>
+<li>构造函数 new调用</li>
+<li>普通方式</li>
+<li>对象方法</li>
+<li>call apply<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2></li>
+</ol>
+<ul>
+<li>构造函数中的this指向实例对象</li>
+<li>原型方法中this指向实例</li>
+<li>非严格模式下，this指向window，严格模式下指向Undefined</li>
+<li>对象方法中，this就是方法的调用者。</li>
+<li>事件方法中的this指定的是绑定事件的对象。多数情况下是DOM</li>
+<li>定是函数中的this指向window</li>
+<li>call apply bind所调用的函数中的this，就是第第一参数，该参数必须是引用类型。</li>
+</ul>
+<p>ES5添加了bind特性，bind改变函数内部this的指向的时候不调用函数，bind会有一个返回值，返回改变之后的新函数。</p>
+<h1 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h1><ol>
+<li>作为参数的函数</li>
+<li>作为返回值的函数()</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (3)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (3)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (3)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (3)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h1><h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><p>JS在执行的过程中分为两个阶段，预解析阶段，执行阶段<br>在全局预解析的过程中，如果变量名和函数名相同，那么以函数为准。</p>
+<p>预解析又分为</p>
+<ul>
+<li>全局预解析 所有的变量和函数都会提前，同名的变量和函数，函数会覆盖同名变量。函数提升可以将函数体也提升。</li>
+<li>函数内部的预解析 同于全局情况，但是会预解析形参。 先解析变量，在解析形参，再解析函数。也是会产生覆盖。</li>
+</ul>
+<p>整体的过程是，先解析全局，执行全局，当调用函数时，解析函数内部，再执行函数。</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>作用域分为全局作用域，函数作用域，不存在块级作用域的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="keyword">var</span> a=<span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a);<span class="comment">//10</span></div></pre></td></tr></table></figure></p>
+<p>以上在大括号外也可以访问到a，所以不存在块。</p>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p>封闭的包裹，在JS中只函数的作用域。</p>
+<p>通过函数的嵌套来形成闭包，(内层函数和内层函数形成的作用域）。</p>
+<p>闭包可以延长作用域的生命周期，正常函数执行之后，函数内部的变量就会被释放，而闭包的情况下，函数内部的变量还会被其他函数调用，不会被释放。用这个特性可以缓存一些中间的状态值。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (4)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (4)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (4)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (4)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="函数的属性"><a href="#函数的属性" class="headerlink" title="函数的属性"></a>函数的属性</h1><ul>
+<li>arguments 所有的实参</li>
+<li>length 形参的个数</li>
+<li>caller函数的调用者</li>
+<li>name 函数的名称</li>
+</ul>
+<p>arguments是一个类数组，有一个属性是callee，就是这个函数本身可用于递归。arguments比较消耗性能，不建议使用。ES6的箭头函数中也没有了这个属性。</p>
+<h1 id="事件队列"><a href="#事件队列" class="headerlink" title="事件队列"></a>事件队列</h1><p>JS的执行时单线程的当遇到比较复杂的运算的时候，后续的任务只能排队，  为了解决这个问题，提出了事件队列</p>
+<p>事件队列中存放各种任务，也就是函数.</p>
+<ol>
+<li>定时函数</li>
+<li>事件函数</li>
+<li>AJAX的回调函数(本身不是事件函数吗？)</li>
+</ol>
+<p>在处理JS的过程中，当碰到以上几种情况的时候，不会直接执行这些函数，把他们缓存到实践队列中。</p>
+<p>事件队列中任务执行的条件</p>
+<ul>
+<li>主线程空闲</li>
+<li>满足任务的触发条件 延时或者对应的事件触发，接收到服务器完成的数据，等等等。</li>
+<li>Promise的then会放到事件队列的最前?会在事件轮循结束时调用，而其他的事件一般在第二次轮循的时候调用。</li>
+</ul>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>原生JS中return false只能阻止默认行为，不能阻止冒泡。只能阻止btn.onclick这种方式的默认行为。不能阻止addEventListener绑定的事件。JQuery中，return false既可以阻止冒泡，也可以阻止默认行为。</p>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">obj,type,fn</span>)</span>&#123;</div><div class="line">         obj.listener=obj.listener||&#123;&#125;;</div><div class="line">         obj.listener[type]=obj.listener[type]||[];</div><div class="line">         obj.listener[type].push(fn);</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">var</span> obj=&#123;&#125;;</div><div class="line">     addEvent(obj,<span class="string">'abc'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"abc1"</span>);</div><div class="line">     &#125;);</div><div class="line">     addEvent(obj,<span class="string">'abc'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"abc2"</span>);</div><div class="line">     &#125;);</div><div class="line">     <span class="built_in">console</span>.dir(obj);</div></pre></td></tr></table></figure>
+<p>#JQ插件</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (5)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (5)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (5)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (5)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h1><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>正则本身的API</p>
+<ul>
+<li>test</li>
+<li>exec</li>
+</ul>
+<p>字符串的API,可以把参数传入正则表达式 在正则表达式后面加上g代表全局匹配。</p>
+<ul>
+<li>search</li>
+<li>match</li>
+<li>split</li>
+<li>replace</li>
+</ul>
+<h3 id="test-方法"><a href="#test-方法" class="headerlink" title="test 方法"></a>test 方法</h3><p>参数是一个字符串，检测是否满足正则。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d/</span>;</div><div class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">"asdfasf1"</span>));<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<h3 id="exec"><a href="#exec" class="headerlink" title="exec"></a>exec</h3><p>exec的参数是一个字符串，返回值是一个数组。和字符串match非全局匹配时方法类似。<br>exec每次执行返回的数组信息很详细，只能通过遍历的方式来全局匹配。</p>
+<h3 id="search"><a href="#search" class="headerlink" title="search"></a>search</h3><p>查找字符串的索引位置,如果没有返回-1.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">"oijlklkjlj88"</span>;</div><div class="line"><span class="built_in">console</span>.log(str.search(i));<span class="comment">//1</span></div></pre></td></tr></table></figure></p>
+<p>###　split<br>把字符串分割成数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">"oijlklkjlj88"</span>;</div><div class="line">   <span class="keyword">var</span> arr=str.split(<span class="string">"l"</span>);</div><div class="line">   <span class="built_in">console</span>.log(arr);<span class="comment">//demo.html:14 ["oij", "k", "kj", "j88"]</span></div></pre></td></tr></table></figure></p>
+<h3 id="match"><a href="#match" class="headerlink" title="match"></a>match</h3><p>匹配，把符合参数的规则抽取转换成数组。</p>
+<h2 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h2><p>把所有符合规则的进行替换，第一个是规则，第二个替换成什么</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (6)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (6)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (6)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (6)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="canvas"><a href="#canvas" class="headerlink" title="canvas"></a>canvas</h1><blockquote>
+<p>H5的新特性，和传统的flash类似，称为画布，可以用来制作动画。</p>
+<h2 id="画横线"><a href="#画横线" class="headerlink" title="画横线"></a>画横线</h2><p>画布的宽高必须用标签的属性来设置，不能用css，如果不设置宽高默认是300*150px。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"cas"</span> <span class="attr">height</span>=<span class="string">"400px"</span> <span class="attr">width</span>=<span class="string">"600px"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> cas=<span class="built_in">document</span>.getElementById(<span class="string">"cas"</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//获取画图工具</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> ctx=cas.getContext(<span class="string">'2d'</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//指定画图的起点</span></span></div><div class="line"><span class="undefined">            ctx.moveTo(100,100);</span></div><div class="line"><span class="javascript">            <span class="comment">// 划路径</span></span></div><div class="line"><span class="undefined">            ctx.lineTo(300,100);</span></div><div class="line"><span class="javascript">            <span class="comment">//描边</span></span></div><div class="line"><span class="undefined">            ctx.stroke();</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="画矩形"><a href="#画矩形" class="headerlink" title="画矩形"></a>画矩形</h2><p>和直线类似，只不过连线路径的时候要连城一个正方形。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"cas"</span> <span class="attr">height</span>=<span class="string">"400px"</span> <span class="attr">width</span>=<span class="string">"600px"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> cas=<span class="built_in">document</span>.getElementById(<span class="string">"cas"</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//获取画图工具</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> ctx=cas.getContext(<span class="string">'2d'</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//指定画图的起点</span></span></div><div class="line"><span class="undefined">            ctx.moveTo(100,100);</span></div><div class="line"><span class="javascript">            <span class="comment">// 划路径</span></span></div><div class="line"><span class="undefined">            ctx.lineTo(300,100);</span></div><div class="line"><span class="undefined">            ctx.lineTo(300,300);</span></div><div class="line"><span class="undefined">            ctx.lineTo(100,300);</span></div><div class="line"><span class="undefined">            ctx.lineTo(100,100);</span></div><div class="line"><span class="javascript">            <span class="comment">//描边</span></span></div><div class="line"><span class="javascript">             ctx.strokeStyle=<span class="string">"#ccc"</span>;</span></div><div class="line"><span class="javascript">            <span class="comment">//设置描边宽度</span></span></div><div class="line"><span class="undefined">            ctx.lineWidth=50;</span></div><div class="line"><span class="undefined">            ctx.stroke();</span></div><div class="line"><span class="javascript">            <span class="comment">//填充</span></span></div><div class="line"><span class="undefined">            ctx.fill();</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="内外嵌套的矩形"><a href="#内外嵌套的矩形" class="headerlink" title="内外嵌套的矩形"></a>内外嵌套的矩形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"cas"</span> <span class="attr">height</span>=<span class="string">"400px"</span> <span class="attr">width</span>=<span class="string">"600px"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> cas=<span class="built_in">document</span>.getElementById(<span class="string">"cas"</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//获取画图工具</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> ctx=cas.getContext(<span class="string">'2d'</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//指定画图的起点</span></span></div><div class="line"><span class="undefined">            ctx.moveTo(100,100);</span></div><div class="line"><span class="javascript">            <span class="comment">// 划路径</span></span></div><div class="line"><span class="undefined">            ctx.lineTo(300,100);</span></div><div class="line"><span class="undefined">            ctx.lineTo(300,300);</span></div><div class="line"><span class="undefined">            ctx.lineTo(100,300);</span></div><div class="line"><span class="undefined">            ctx.lineTo(100,100);</span></div><div class="line"><span class="javascript">            <span class="comment">// 缝合接口</span></span></div><div class="line"><span class="undefined">            ctx.closePath();</span></div><div class="line"><span class="undefined">            ctx.moveTo(150,150);</span></div><div class="line"><span class="undefined">            ctx.lineTo(150,250);</span></div><div class="line"><span class="undefined">            ctx.lineTo(250,250);</span></div><div class="line"><span class="undefined">            ctx.lineTo(250,150);</span></div><div class="line"><span class="undefined">            ctx.lineTo(150,150);</span></div><div class="line"><span class="undefined">            ctx.closePath();</span></div><div class="line"><span class="javascript">            <span class="comment">//描边</span></span></div><div class="line"><span class="javascript">             ctx.strokeStyle=<span class="string">"#ccc"</span>;</span></div><div class="line"><span class="javascript">            <span class="comment">//设置描边宽度</span></span></div><div class="line"><span class="undefined">            ctx.lineWidth=10;</span></div><div class="line"><span class="undefined">            ctx.stroke();</span></div><div class="line"><span class="javascript">            <span class="comment">//填充</span></span></div><div class="line"><span class="undefined">            ctx.fill();</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>关于闭合，手动闭合如果线宽比较大的话，会明显缺个角，补上这个角，可以多加0.1个像素。</p>
+<h2 id="beginPath"><a href="#beginPath" class="headerlink" title="beginPath()"></a>beginPath()</h2><p>开启一个新的路线，可以区分和之前的路径颜色，宽度等等  </p>
+<h2 id="正弦曲线"><a href="#正弦曲线" class="headerlink" title="正弦曲线"></a>正弦曲线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"cas"</span> <span class="attr">height</span>=<span class="string">"400px"</span> <span class="attr">width</span>=<span class="string">"600px"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> cas=<span class="built_in">document</span>.getElementById(<span class="string">"cas"</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//获取画图工具</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> ctx=cas.getContext(<span class="string">'2d'</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">//指定画图的起点</span></span></div><div class="line"><span class="undefined">            ctx.moveTo(0,0);</span></div><div class="line"><span class="javascript">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></div><div class="line"><span class="javascript">                ctx.lineTo(i,<span class="number">100</span>*<span class="built_in">Math</span>.sin(i/<span class="number">30</span>)+<span class="number">100</span>);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">            ctx.stroke();</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (7)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (7)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (7)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (7)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="web第三天"><a href="#web第三天" class="headerlink" title="web第三天"></a>web第三天</h1><h2 id="响应式开发原因"><a href="#响应式开发原因" class="headerlink" title="响应式开发原因"></a>响应式开发原因</h2><p>一般情况下网站会有移动端和PC端都会进行访问，但是屏幕的分辨率不一样。</p>
+<ul>
+<li>1200px</li>
+<li>​</li>
+</ul>
+<p>解决的办法有两种：</p>
+<ul>
+<li>开发两套页面：PC和M端，这样做后台需要处理两个页面。</li>
+<li>开发一个响应式界面:这样做后台需要处理一个网页，但是前端的工作量没什么变化。<br>老站点一般用前者，新开发网站可能会使用第二套方法。<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2>响应式页面通过区分屏幕的宽度来区分，需要用到属性查询功能。选择1200分辨率以上时，container设置1000px宽度，居中。<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!--//screen可以省略--&gt;</div><div class="line">@<span class="keyword">media</span>  screen (min-width:<span class="number">1200px</span>)&#123;</div><div class="line">    <span class="selector-class">.container</span>&#123;</div><div class="line">        <span class="attribute">width</span>:<span class="number">1000px</span>;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="bootstrap"><a href="#bootstrap" class="headerlink" title="bootstrap"></a>bootstrap</h2><p>最终目的是提高开发的效率，</p>
+<ol>
+<li>container 固定宽度</li>
+<li>container-fluid   宽度百分百<h3 id="珊栏布局"><a href="#珊栏布局" class="headerlink" title="珊栏布局"></a>珊栏布局</h3>可以嵌套<br><code>.col-sm-n-offset-n</code></li>
+<li>n表示占位数</li>
+<li>row 横排</li>
+<li>col 竖排</li>
+<li>xs 超小屏</li>
+<li>sm 小屏幕</li>
+<li>md 中屏</li>
+<li>lg 大屏</li>
+<li>offset-n 表示偏移</li>
+<li>`col-xs-push-1 往右推 pull是拉</li>
+<li>visible-lg 大屏显示</li>
+<li>hidden-lg 大屏隐藏<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3>自定义字体/字体图标</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/21/笔记 (8)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/21/笔记 (8)/" itemprop="url">草稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
+                2016-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rubbish/" itemprop="url" rel="index">
+                    <span itemprop="name">rubbish</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/21/笔记 (8)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/03/21/笔记 (8)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
+<ul>
+<li>touchstart  手指触摸 不管几个手指</li>
+<li>touchmove  手指在滑动的时候</li>
+<li>touchend  手指离开屏幕</li>
+<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>事件参数有以下几个常用属性</p>
+<ul>
+<li>changedTouches 所有改变的触摸点集合</li>
+<li>targetTouches 目标元素上所有触摸点集合</li>
+<li>touches  所有触摸点    </li>
+<li>集合内的对象内的三组坐标<ul>
+<li>client   视口的坐标    </li>
+<li>page 页面的坐标</li>
+<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>没有滑动过</li>
+<li>150ms内响应</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Lee move" />
+          <p class="site-author-name" itemprop="name">Lee move</p>
+           
+              <p class="site-description motion-element" itemprop="description">小前端,Vue,Angular,Ionic.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3181648714/profile?rightmod=1&wvr=6&mod=personnumber" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/li-mu-40-98-54/activities" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      zhihu
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lee move</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    主题 &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Muse
+    </a>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://leemove.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
