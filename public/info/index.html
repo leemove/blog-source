@@ -59,7 +59,7 @@
       <input id="myname" type="text" class="form-control" placeholder="好像叫李什么来着.." aria-describedby="basic-addon1">
     </div>
     <div class="pic">
-      <!-- <img src="/uploads/jiaohuang.gif"  class="img-rounded" alt="" srcset=""> -->
+      <img  hidden src="/uploads/jiaohuang.gif"  class="img-rounded" alt="" srcset="">
       <img src="/uploads/meixiangdaoba.jpg"  class="img-rounded" alt="" srcset="">
     </div>
     <div class="alert alert-info" role="alert">
@@ -81,15 +81,18 @@
     $(
       function () {
         $('.small').hide()
-        var timer = window.setInterval(timeHandel, 300)
+        $('.pic img').eq(0).hide()
         $('.alert-info').hide()
+        var timer = window.setInterval(timeHandel, 300)
         $('#myname').keyup(function (e) {
           if (this.value.trim() === '李木') {
-            $('.pic img').attr('src', '/uploads/jiaohuang.gif')
+            $('.pic img').eq(0).show()
+            $('.pic img').eq(1).hide()
             $('.alert-info').show()
           } else {
-            $('.pic img').attr('src', '/uploads/meixiangdaoba.jpg')
             $('.alert-info').hide()
+            $('.pic img').eq(1).show()
+            $('.pic img').eq(0).hide()
           }
         })
         var pro  = $('.progress-bar-striped')
