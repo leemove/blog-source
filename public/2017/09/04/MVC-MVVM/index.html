@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Angular Vue," />
 
 
 
@@ -94,16 +94,22 @@
 
 
 
-<meta name="description" content="小前端,Vue,Angular,Ionic.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小木屋">
-<meta property="og:url" content="http://yoursite.com/categories/CSS3/index.html">
+<meta name="description" content="从前端角度探讨下MVVM MVC首先声明一点,我不敢说让你花几分钟就可以完全理解这些概念.这篇文章是我个人的理解,并不一定完全正确!!!欢迎指正和讨论. 最近前端工程化越来越普遍完善了,面试的时候也总会被问到MVC,MVVM这类的架构名词,第一次听肯定让人很费劲,但是千万不要想得太难,其实非常非常的简单好理解,这篇文章主要会结合前端的业务场景来解释解释这些概念. 什么是M , V , CModel">
+<meta name="keywords" content="Angular Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MVC-MVVM">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/MVC-MVVM/index.html">
 <meta property="og:site_name" content="小木屋">
-<meta property="og:description" content="小前端,Vue,Angular,Ionic.">
+<meta property="og:description" content="从前端角度探讨下MVVM MVC首先声明一点,我不敢说让你花几分钟就可以完全理解这些概念.这篇文章是我个人的理解,并不一定完全正确!!!欢迎指正和讨论. 最近前端工程化越来越普遍完善了,面试的时候也总会被问到MVC,MVVM这类的架构名词,第一次听肯定让人很费劲,但是千万不要想得太难,其实非常非常的简单好理解,这篇文章主要会结合前端的业务场景来解释解释这些概念. 什么是M , V , CModel">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://image.beekka.com/blog/2015/bg2015020105.png">
+<meta property="og:image" content="http://image.beekka.com/blog/2015/bg2015020110.png">
+<meta property="og:image" content="https://tuchuang001.com/images/2017/09/04/mvw.md.png">
+<meta property="og:updated_time" content="2017-09-04T10:40:58.498Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小木屋">
-<meta name="twitter:description" content="小前端,Vue,Angular,Ionic.">
+<meta name="twitter:title" content="MVC-MVVM">
+<meta name="twitter:description" content="从前端角度探讨下MVVM MVC首先声明一点,我不敢说让你花几分钟就可以完全理解这些概念.这篇文章是我个人的理解,并不一定完全正确!!!欢迎指正和讨论. 最近前端工程化越来越普遍完善了,面试的时候也总会被问到MVC,MVVM这类的架构名词,第一次听肯定让人很费劲,但是千万不要想得太难,其实非常非常的简单好理解,这篇文章主要会结合前端的业务场景来解释解释这些概念. 什么是M , V , CModel">
+<meta name="twitter:image" content="http://image.beekka.com/blog/2015/bg2015020105.png">
 
 
 
@@ -132,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/CSS3/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/04/MVC-MVVM/"/>
 
 
 
 
 
-  <title>分类: CSS3 | 小木屋</title>
+  <title>MVC-MVVM | 小木屋</title>
   
 
 
@@ -167,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,111 +291,176 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>CSS3<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/04/MVC-MVVM/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee move">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小木屋">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/04/10/旋转木马动画/" itemprop="url">
-              
-                <span itemprop="name">旋转木马C3动画</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">MVC-MVVM</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-10T16:41:02+08:00"
-              content="2016-04-10" >
-          04-10
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-04T17:41:58+08:00">
+                2017-09-04
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/04/MVC-MVVM/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/09/04/MVC-MVVM/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/09/两个常用的盒子特效/" itemprop="url">
-              
-                <span itemprop="name">小盒子触摸特效</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-09T18:19:02+08:00"
-              content="2016-04-09" >
-          04-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/08/perspective属性/" itemprop="url">
-              
-                <span itemprop="name">perspective属性</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-08T20:41:02+08:00"
-              content="2016-04-08" >
-          04-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="从前端角度探讨下MVVM-MVC"><a href="#从前端角度探讨下MVVM-MVC" class="headerlink" title="从前端角度探讨下MVVM MVC"></a>从前端角度探讨下MVVM MVC</h1><p>首先声明一点,我不敢说让你花几分钟就可以完全理解这些概念.这篇文章是我个人的理解,并不一定<code>完全正确</code>!!!欢迎指正和讨论.</p>
+<p>最近前端工程化越来越普遍完善了,面试的时候也总会被问到<code>MVC</code>,<code>MVVM</code>这类的架构名词,第一次听肯定让人很费劲,但是千万不要想得太难,其实非常非常的简单好理解,这篇文章主要会结合前端的业务场景来解释解释这些概念.</p>
+<h2 id="什么是M-V-C"><a href="#什么是M-V-C" class="headerlink" title="什么是M , V , C"></a>什么是M , V , C</h2><h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>M: Model 模型</p>
+<p>也就是一个抽象对象的模型,作为一个小前端,你是不是也写过<code>express</code>呢?在express中一个最普通的模型可以就是这样的.很简单.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Person = &#123;</div><div class="line">  name: <span class="built_in">String</span>,</div><div class="line">  age: <span class="built_in">Number</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这就是一个人类的模型,有两个属性,一个是名字必须是<code>字符串</code>,另外一个就是年龄必须是<code>数字</code>.如果实例出一个对象的话可能就是<code>小明</code>,<code>24岁</code>这种感觉.<code>Model</code>层只关心数据最基础的增删改查.</p>
+<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>V: View 视图</p>
+<p>也就是我们所看到的.我们存在model的数据当然要展示出来了,展示在网页,展示在<code>html</code>里面.<code>view</code>就可以当成一个静态页面.<code>View</code>只关心数据的显示.</p>
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><p>C: Controller 控制器</p>
+<p>我们已经有了<code>模型Model</code>要显示在<code>View</code>上,如果像上例一样的简单数据,可以直接拿去显示,但是数据有时候不是单纯的为了显示,会有增删改的需求.这时候我们的<code>Controller控制器</code>就出现了.可以控制数据的家伙就是他.</p>
+<h3 id="MVC-组合之后"><a href="#MVC-组合之后" class="headerlink" title="MVC 组合之后"></a>MVC 组合之后</h3><p><img src="http://image.beekka.com/blog/2015/bg2015020105.png" alt="MVC"></p>
+<p>图片来自<a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="external">阮一峰</a>大大的博客.</p>
+<p>所以一次完整的交互结合实际大概是这样的.</p>
+<p><code>View</code>层网页显示了来自<code>Model</code>的数据,用户说我要改这条数据,点击了一下网页<code>View</code>,<code>Controll</code>收到来自<code>View</code>的反馈,赶紧去修改数据,也就是找<code>Model</code>.<code>Model</code>变了之后,用户再次获取数据的时候,数据已经更新过了!这就是传统的<code>MVC</code>.</p>
+<h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><p>一眼直接看上去,你大概可以看到,少了个<code>C</code>多了个<code>V</code>和<code>M</code>.难道有两个<code>ViewModel</code>其实不是这样的.现在<code>Vue</code>和<code>Angular</code>这两款主流框架都包含了一个很nb的功能,叫做双向绑定.应运而生的类似概念就是<code>ViewModel</code>也就是<code>VM</code>.<code>VM</code>相比较<code>C</code>有一点很方便就是<code>&quot;双向流&quot;</code>.</p>
+<p><img src="http://image.beekka.com/blog/2015/bg2015020110.png" alt="MVVM"></p>
+<p>双向的好处就是<code>ViewModel</code>不在只能操作<code>Model</code>了,可以直接去操作<code>View</code>更改视图.同时可以在获取数据之后进行加工,处理再显示到<code>View</code>上.减少了许多不必要的操作.</p>
+<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><p>这些概念其实并不复杂,但是还没有确定准确的标准,所以会导致很混乱.阮一峰老师的和MSDN之间就有很大的差别.所以这个东西主要还是理解怎么去用,怎么去思考,并没有一个太标准的答案,就像<code>angular</code>称自己为<code>MVW</code>,<code>W</code>:<code>Whatever</code>.你懂得怎么把将项目按照逻辑区分层次,知道每个层级该做什么,不能做什么就足够了.<del>开心就好.</del></p>
+<p><a href="https://tuchuang001.com/image/4wEKx" target="_blank" rel="external"><img src="https://tuchuang001.com/images/2017/09/04/mvw.md.png" alt="mvw.md.png"></a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Angular-Vue/" rel="tag"># Angular Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/04/新浪财经面试/" rel="next" title="新浪财经面试">
+                <i class="fa fa-chevron-left"></i> 新浪财经面试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -397,6 +468,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -417,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -515,6 +606,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从前端角度探讨下MVVM-MVC"><span class="nav-number">1.</span> <span class="nav-text">从前端角度探讨下MVVM MVC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是M-V-C"><span class="nav-number">1.1.</span> <span class="nav-text">什么是M , V , C</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Model"><span class="nav-number">1.1.1.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View"><span class="nav-number">1.1.2.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller"><span class="nav-number">1.1.3.</span> <span class="nav-text">Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC-组合之后"><span class="nav-number">1.1.4.</span> <span class="nav-text">MVC 组合之后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM"><span class="nav-number">1.2.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的理解"><span class="nav-number">1.3.</span> <span class="nav-text">我的理解</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -643,10 +750,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -664,6 +771,18 @@
       <script id="dsq-count-scr" src="https://leemove.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/09/04/MVC-MVVM/';
+          this.page.identifier = '2017/09/04/MVC-MVVM/';
+          this.page.title = 'MVC-MVVM';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://leemove.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
