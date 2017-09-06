@@ -4,7 +4,7 @@
 
 # Site
 title: 小木屋
-subtitle: 代码复制员
+subtitle: JS大法好,人生太长,我用js.
 description:  小前端,Vue,Angular,Ionic.
 author: Lee move
 language: zh-Hans
@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://leemove.com
+root: /blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
