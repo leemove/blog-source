@@ -1,1835 +1,246 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html>
+    <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="小前端,Vue,Angular,Ionic.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小木屋">
-<meta property="og:url" content="http://leemove.info/page/5/index.html">
-<meta property="og:site_name" content="小木屋">
-<meta property="og:description" content="小前端,Vue,Angular,Ionic.">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小木屋">
-<meta name="twitter:description" content="小前端,Vue,Angular,Ionic.">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://leemove.info/page/5/"/>
-
-
-
-
-
-  <title>小木屋</title>
-  
-
-
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?7994a7e3e0af3de6dd91d1ff3b204c5d";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">小木屋</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">JS大法好,人生太长,我用js.</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/21/笔记 (8)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/21/笔记 (8)/" itemprop="url">草稿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
-                2016-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/rubbish/" itemprop="url" rel="index">
-                    <span itemprop="name">rubbish</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/21/笔记 (8)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/笔记 (8)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
-<ul>
-<li>touchstart  手指触摸 不管几个手指</li>
-<li>touchmove  手指在滑动的时候</li>
-<li>touchend  手指离开屏幕</li>
-<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>事件参数有以下几个常用属性</p>
-<ul>
-<li>changedTouches 所有改变的触摸点集合</li>
-<li>targetTouches 目标元素上所有触摸点集合</li>
-<li>touches  所有触摸点    </li>
-<li>集合内的对象内的三组坐标<ul>
-<li>client   视口的坐标    </li>
-<li>page 页面的坐标</li>
-<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>没有滑动过</li>
-<li>150ms内响应</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/21/笔记 (9)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/21/笔记 (9)/" itemprop="url">草稿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T20:41:02+08:00">
-                2016-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/rubbish/" itemprop="url" rel="index">
-                    <span itemprop="name">rubbish</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/21/笔记 (9)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/笔记 (9)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="移动web开发第一天"><a href="#移动web开发第一天" class="headerlink" title="移动web开发第一天"></a>移动web开发第一天</h1><h2 id="移动端开发已经是必备技能"><a href="#移动端开发已经是必备技能" class="headerlink" title="移动端开发已经是必备技能"></a>移动端开发已经是必备技能</h2><p>移动端推进了H5的推广，手机浏览器，目前移动端浏览网页已经超过了PC端的访问，所以很重要。</p>
-<h2 id="移动端兼容性比较好"><a href="#移动端兼容性比较好" class="headerlink" title="移动端兼容性比较好"></a>移动端兼容性比较好</h2><p>移动端的浏览器，一般都版本较新。尤其是国内基本都是基于webkit内核，C3的属性一般需要些私有前缀-webkit-。</p>
-<h2 id="移动适配问题"><a href="#移动适配问题" class="headerlink" title="移动适配问题"></a>移动适配问题</h2><p>移动端需要考虑适配的问题，移动端的屏幕大小不一，不能像PC端一样设置版心。<br>京东移动端项目采用百分比自适应布局，流式布局另外需要配置viewport。</p>
-<h2 id="流式布局"><a href="#流式布局" class="headerlink" title="流式布局"></a>流式布局</h2><p>就是不使用固定像素布局</p>
-<h2 id="viewport-视觉窗口"><a href="#viewport-视觉窗口" class="headerlink" title="viewport 视觉窗口"></a>viewport 视觉窗口</h2><p>用来承载网页，只在移动端才会有。</p>
-<p>浏览器&gt;viewport&gt;网页</p>
-<h2 id="标准的移动端开发要求-viewport"><a href="#标准的移动端开发要求-viewport" class="headerlink" title="标准的移动端开发要求(viewport)"></a>标准的移动端开发要求(viewport)</h2><ul>
-<li><p>不能出现横向滚动条 （也可以认为是网页的宽度和浏览器的宽度一致）</p>
-</li>
-<li><p>缩放的比例和PC端保持一致</p>
-</li>
-<li><p>不允许页面自行缩放</p>
-</li>
-</ul>
-<h3 id="怎么设置viewport"><a href="#怎么设置viewport" class="headerlink" title="怎么设置viewport"></a>怎么设置viewport</h3><p>在header里面meta标签 name=viewport</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot;&gt;</div></pre></td></tr></table></figure>
-<h3 id="viewport-用那些属性"><a href="#viewport-用那些属性" class="headerlink" title="viewport 用那些属性"></a>viewport 用那些属性</h3><ul>
-<li><p>width 设置视口的宽度单位默认px</p>
-<p>设置当前视口宽度为当前设备宽度<code>content=&quot;device-width</code></p>
-</li>
-<li><p>height 设置视口的高度单位默认px</p>
-</li>
-<li><p>initial-scale 默认初始缩放比例<code>content=&quot;inital-scale=1&quot;</code></p>
-</li>
-<li><p>user-scalable 是否允许用户自己缩放 可以设置成yes no 1 0默认是可以缩放(yes 1)</p>
-<p>如果设置多个属性参数 那么用逗号隔开就可以 也可以用快捷语法<code>meta:vp</code>来实现标准化设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width inital-scale=1 user-scalable=no&quot; &gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>淘宝的viewport中设置了缩放，来解决高清屏幕的设备中图标失真的方法。</p>
-<p>在京东项目中，会将背景图片单独进行压缩 来实现目的</p>
-<h2 id="移动端的容器宽度"><a href="#移动端的容器宽度" class="headerlink" title="移动端的容器宽度"></a>移动端的容器宽度</h2><p>目前一般常用的主流的设计稿容器宽度一种是640 iphone4,另外一种是iphone6的750</p>
-<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h3 id="图片的下间隙"><a href="#图片的下间隙" class="headerlink" title="图片的下间隙"></a>图片的下间隙</h3><p>间隙的大小和字体的大小有关系x的下面两个脚就是基线(baseline)，图片会和他对齐，系统会预留y比x长的一块(yx) 也就会产生间隙。</p>
-<p>   font-size:0 ,vertical align,   display:block,</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/21/transition的介绍/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/21/transition的介绍/" itemprop="url">HTML5的语义标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-21T19:13:57+08:00">
-                2016-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/21/transition的介绍/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/21/transition的介绍/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="transition进阶介绍"><a href="#transition进阶介绍" class="headerlink" title="transition进阶介绍"></a>transition进阶介绍</h1><p> 过渡就是当当前元素的属性发生变化时，不是立即切换，而是逐渐的发生变化，会产生动画效果。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/21/transition的介绍/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/19/C3颜色的渐变/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/19/C3颜色的渐变/" itemprop="url">C3背景颜色的渐变</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-19T21:03:51+08:00">
-                2016-03-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/19/C3颜色的渐变/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/19/C3颜色的渐变/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="C3背景颜色的渐变"><a href="#C3背景颜色的渐变" class="headerlink" title="C3背景颜色的渐变"></a>C3背景颜色的渐变</h1><p>颜色的渐变是指从一个颜色逐渐变成另外一个颜色，具体体验在RGB值的改变，C3中不需要借助图片处理，可以直接生成许多颜色的渐变效果。节省了资源的占用，可以加快网页的加载速度。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/19/C3颜色的渐变/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/14/C3中background的新玩法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/14/C3中background的新玩法/" itemprop="url">C3背景新玩法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-14T20:37:51+08:00">
-                2016-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/14/C3中background的新玩法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/14/C3中background的新玩法/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="C3背景新玩法"><a href="#C3背景新玩法" class="headerlink" title="C3背景新玩法"></a>C3背景新玩法</h1><hr>
-<p>CCS3背景相添加了许多新的特性，可以配合过渡属性不依靠JS也可以完成许多动画效果，十分的便捷。本文章介绍的是，一些C3中新添加的常用的基础的背景属性。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/14/C3中background的新玩法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leemove.info/2016/03/13/HTML5的语义标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lee move">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小木屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/13/HTML5的语义标签/" itemprop="url">HTML5的语义标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-13T21:03:51+08:00">
-                2016-03-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/13/HTML5的语义标签/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/13/HTML5的语义标签/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="HTML5的语义标签"><a href="#HTML5的语义标签" class="headerlink" title="HTML5的语义标签"></a>HTML5的语义标签</h1><h2 id="语义标签是指没有特定的浏览器默认行为的标签-可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。"><a href="#语义标签是指没有特定的浏览器默认行为的标签-可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。" class="headerlink" title=" 语义标签是指没有特定的浏览器默认行为的标签 ,可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。"></a> 语义标签是指没有特定的浏览器默认行为的标签 ,可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/13/HTML5的语义标签/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="Lee move" />
-          <p class="site-author-name" itemprop="name">Lee move</p>
-           
-              <p class="site-description motion-element" itemprop="description">小前端,Vue,Angular,Ionic.</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">46</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/3181648714/profile?rightmod=1&wvr=6&mod=personnumber" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/li-mu-40-98-54/activities" target="_blank" title="zhihu">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      zhihu
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 &mdash; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Lee move</span>
-
-  
-</div>
-
-
-  <div class="powered-by">
-    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-  </div>
-
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">
-    主题 &mdash;
-    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Muse
-    </a>
-  </div>
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://leemove.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
-
-
+	<meta charset="utf-8">
 
 	
 
+	<title>小木屋</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<link rel="shortcut icon" href="/favicon.ico">	
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/caomei.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+    <body>
+        <div class="root">
+            <div class='topnavs container fixed-690'>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/archives">Archives</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+</div>
+                <section class="container mainbody fixed-690">
+                    <div class="postcards">
+    
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/21/笔记 (8)/">
+                草稿
+            </a>
+        </h3>
+        
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-21
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/21/笔记 (9)/">
+                草稿
+            </a>
+        </h3>
+        
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-21
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/21/transition的介绍/">
+                HTML5的语义标签
+            </a>
+        </h3>
+        
+            <div class="postcard-body">
+                <div class="excerpt">
+                    <h1 id="transition进阶介绍"><a href="#transition进阶介绍" class="headerlink" title="transition进阶介绍"></a>transition进阶介绍</h1><p> 过渡就是当当前元素的属性发生变化时，不是立即切换，而是逐渐的发生变化，会产生动画效果。<br>
+                </div>
+                <div class="read-more">
+                    <a href="/2016/03/21/transition的介绍/">
+                        <i class="czs-hand-button"></i>查看全文
+                    </a>
+                </div>
+            </div>
+            
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-21
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/19/C3颜色的渐变/">
+                C3背景颜色的渐变
+            </a>
+        </h3>
+        
+            <div class="postcard-body">
+                <div class="excerpt">
+                    <h1 id="C3背景颜色的渐变"><a href="#C3背景颜色的渐变" class="headerlink" title="C3背景颜色的渐变"></a>C3背景颜色的渐变</h1><p>颜色的渐变是指从一个颜色逐渐变成另外一个颜色，具体体验在RGB值的改变，C3中不需要借助图片处理，可以直接生成许多颜色的渐变效果。节省了资源的占用，可以加快网页的加载速度。<br>
+                </div>
+                <div class="read-more">
+                    <a href="/2016/03/19/C3颜色的渐变/">
+                        <i class="czs-hand-button"></i>查看全文
+                    </a>
+                </div>
+            </div>
+            
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-19
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/14/C3中background的新玩法/">
+                C3背景新玩法
+            </a>
+        </h3>
+        
+            <div class="postcard-body">
+                <div class="excerpt">
+                    <h1 id="C3背景新玩法"><a href="#C3背景新玩法" class="headerlink" title="C3背景新玩法"></a>C3背景新玩法</h1><hr>
+<p>CCS3背景相添加了许多新的特性，可以配合过渡属性不依靠JS也可以完成许多动画效果，十分的便捷。本文章介绍的是，一些C3中新添加的常用的基础的背景属性。<br>
+                </div>
+                <div class="read-more">
+                    <a href="/2016/03/14/C3中background的新玩法/">
+                        <i class="czs-hand-button"></i>查看全文
+                    </a>
+                </div>
+            </div>
+            
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-14
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+        <div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="/2016/03/13/HTML5的语义标签/">
+                HTML5的语义标签
+            </a>
+        </h3>
+        
+            <div class="postcard-body">
+                <div class="excerpt">
+                    <h1 id="HTML5的语义标签"><a href="#HTML5的语义标签" class="headerlink" title="HTML5的语义标签"></a>HTML5的语义标签</h1><h2 id="语义标签是指没有特定的浏览器默认行为的标签-可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。"><a href="#语义标签是指没有特定的浏览器默认行为的标签-可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。" class="headerlink" title=" 语义标签是指没有特定的浏览器默认行为的标签 ,可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。"></a> 语义标签是指没有特定的浏览器默认行为的标签 ,可以便于页面的维护，增加页面的可阅读性。同时也方便爬虫访问网页，对SEO起到优化的作用。</h2>
+                </div>
+                <div class="read-more">
+                    <a href="/2016/03/13/HTML5的语义标签/">
+                        <i class="czs-hand-button"></i>查看全文
+                    </a>
+                </div>
+            </div>
+            
+                <footer class="postcard-footer">
+                    <span>
+                        Lee move
+                    </span>
+                    <span class="bull">·</span>
+                    <span>
+                        2016-03-13
+                    </span>
+                </footer>
+    </div>
+</div>
+            
+
+</div>
 
 
 
 
-  
+<div class="paging">
+    <a href="/page/4/" class="btn btn-secondary" role="button" aria-disabled="true">上一页</a>
+    <a href="/" class="btn btn-secondary disabled" role="button" aria-disabled="true">下一页</a>
+</div>
+
+                </section>
+                <footer class="container fixed-690 footer">
+    <div>
+        <span>Power by <a href="https://hexo.io">Hexo</a></span>
+    </div>
+    <div>
+        <span>Theme <a href="https://github.com/zhengxiaowai/hexo-theme-lessless">lessless</a></span>
+    </div>
+    
+<div>
+    <span id="hexiangyutest_container_site_pv">
+    PV: <span id="busuanzi_value_site_pv"></span>
+    </span>
+    <span id="busuanzi_container_site_uv">
+    UV: <span id="busuanzi_value_site_uv"></span>
+    </span>
+</div>
+
+</footer>
+        </div>
+        
+<script src="/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+    </body>
 </html>
