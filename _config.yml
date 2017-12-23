@@ -4,7 +4,7 @@
 
 # Site
 title: 小木屋
-subtitle: JS大法好,人生太长,我用js.
+subtitle: 人生太长,我用js.
 description:  小前端,Vue,Angular,Ionic.
 author: Lee move
 language: zh-Hans
@@ -73,19 +73,14 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: next
-theme: hexo-theme-lessless
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: rsync
-  host: 45.78.35.16
-  user: root
-  root: /usr/share/nginx/html/blog-source/public
-  port: 29709
-  delete: true
-  verbose: true
-  ignore_errors: false
+  type: git
+  repo: git@github.com:leemove/leemove.github.io.git
+  branch: master
 
 search:
   path: search.xml
