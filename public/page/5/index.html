@@ -159,6 +159,117 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-笔记 (7)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/21/笔记 (7)/">草稿</a>
+    </h1>
+  
+
+        
+        <a href="/2016/03/21/笔记 (7)/" class="archive-article-date">
+  	<time datetime="2016-03-21T12:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="web第三天"><a href="#web第三天" class="headerlink" title="web第三天"></a>web第三天</h1><h2 id="响应式开发原因"><a href="#响应式开发原因" class="headerlink" title="响应式开发原因"></a>响应式开发原因</h2><p>一般情况下网站会有移动端和PC端都会进行访问，但是屏幕的分辨率不一样。</p>
+<ul>
+<li>1200px</li>
+<li>​</li>
+</ul>
+<p>解决的办法有两种：</p>
+<ul>
+<li>开发两套页面：PC和M端，这样做后台需要处理两个页面。</li>
+<li>开发一个响应式界面:这样做后台需要处理一个网页，但是前端的工作量没什么变化。<br>老站点一般用前者，新开发网站可能会使用第二套方法。<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2>响应式页面通过区分屏幕的宽度来区分，需要用到属性查询功能。选择1200分辨率以上时，container设置1000px宽度，居中。<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!--//screen可以省略--&gt;</div><div class="line">@<span class="keyword">media</span>  screen (min-width:<span class="number">1200px</span>)&#123;</div><div class="line">    <span class="selector-class">.container</span>&#123;</div><div class="line">        <span class="attribute">width</span>:<span class="number">1000px</span>;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="bootstrap"><a href="#bootstrap" class="headerlink" title="bootstrap"></a>bootstrap</h2><p>最终目的是提高开发的效率，</p>
+<ol>
+<li>container 固定宽度</li>
+<li>container-fluid   宽度百分百<h3 id="珊栏布局"><a href="#珊栏布局" class="headerlink" title="珊栏布局"></a>珊栏布局</h3>可以嵌套<br><code>.col-sm-n-offset-n</code></li>
+<li>n表示占位数</li>
+<li>row 横排</li>
+<li>col 竖排</li>
+<li>xs 超小屏</li>
+<li>sm 小屏幕</li>
+<li>md 中屏</li>
+<li>lg 大屏</li>
+<li>offset-n 表示偏移</li>
+<li>`col-xs-push-1 往右推 pull是拉</li>
+<li>visible-lg 大屏显示</li>
+<li>hidden-lg 大屏隐藏<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3>自定义字体/字体图标</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">废稿</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/rubbish/" class="article-tag-list-link color3">rubbish</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/03/21/笔记 (7)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-笔记 (8)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -747,6 +858,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">废稿</a>
               </li>
              
@@ -756,10 +871,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>
