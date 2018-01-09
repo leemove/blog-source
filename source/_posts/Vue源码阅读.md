@@ -16,7 +16,7 @@ Vue是一个流行的Js框架,和Google的`Angular`,FaceBook的`React`相类似.
 
 <!-- more -->
 
-## 入口
+## 目录结构
 
 首先从github 上下载了`2.5.2`版本的代码,目录结构如下,我们大致可以看出一些目录的含义.
 
@@ -29,13 +29,13 @@ Vue是一个流行的Js框架,和Google的`Angular`,FaceBook的`React`相类似.
 │  │  ├─directives
 │  │  └─parser
 │  ├─core # 核心相关
-│  │  ├─components
-│  │  ├─global-api
-│  │  ├─instance
+│  │  ├─components # 组件
+│  │  ├─global-api # 全局api
+│  │  ├─instance   # 实例
 │  │  │  └─render-helpers
-│  │  ├─observer
-│  │  ├─util
-│  │  └─vdom
+│  │  ├─observer  # 观察者, 实现双向绑定的关键
+│  │  ├─util # 工具
+│  │  └─vdom # 大名鼎鼎的虚拟dom
 │  │      ├─helpers
 │  │      └─modules
 │  ├─platforms # 平台
@@ -147,4 +147,4 @@ Vue.prototype.$mount = function (
 }
 ```
 
-原来每次挂载都调用了`mountComponent`,我们有必要看一下这个nb的函数.他的位置在`core/instance/lifecycle.js`,看起来应该是生命周期的文件.嗯,下一次我们就更新声明周期吧.
+原来每次挂载都调用了`mountComponent`,我们有必要看一下这个nb的函数.他的位置在`core/instance/lifecycle.js`,看起来应该是生命周期的文件.
