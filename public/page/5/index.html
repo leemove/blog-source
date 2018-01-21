@@ -159,19 +159,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-笔记 (4)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-笔记 (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/21/笔记 (4)/">草稿</a>
+      <a class="article-title" href="/2016/03/21/笔记 (3)/">草稿</a>
     </h1>
   
 
         
-        <a href="/2016/03/21/笔记 (4)/" class="archive-article-date">
+        <a href="/2016/03/21/笔记 (3)/" class="archive-article-date">
   	<time datetime="2016-03-21T12:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
 </a>
         
@@ -179,30 +179,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数的属性"><a href="#函数的属性" class="headerlink" title="函数的属性"></a>函数的属性</h1><ul>
-<li>arguments 所有的实参</li>
-<li>length 形参的个数</li>
-<li>caller函数的调用者</li>
-<li>name 函数的名称</li>
-</ul>
-<p>arguments是一个类数组，有一个属性是callee，就是这个函数本身可用于递归。arguments比较消耗性能，不建议使用。ES6的箭头函数中也没有了这个属性。</p>
-<h1 id="事件队列"><a href="#事件队列" class="headerlink" title="事件队列"></a>事件队列</h1><p>JS的执行时单线程的当遇到比较复杂的运算的时候，后续的任务只能排队，  为了解决这个问题，提出了事件队列</p>
-<p>事件队列中存放各种任务，也就是函数.</p>
-<ol>
-<li>定时函数</li>
-<li>事件函数</li>
-<li>AJAX的回调函数(本身不是事件函数吗？)</li>
-</ol>
-<p>在处理JS的过程中，当碰到以上几种情况的时候，不会直接执行这些函数，把他们缓存到实践队列中。</p>
-<p>事件队列中任务执行的条件</p>
+        <h1 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h1><h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><p>JS在执行的过程中分为两个阶段，预解析阶段，执行阶段<br>在全局预解析的过程中，如果变量名和函数名相同，那么以函数为准。</p>
+<p>预解析又分为</p>
 <ul>
-<li>主线程空闲</li>
-<li>满足任务的触发条件 延时或者对应的事件触发，接收到服务器完成的数据，等等等。</li>
-<li>Promise的then会放到事件队列的最前?会在事件轮循结束时调用，而其他的事件一般在第二次轮循的时候调用。</li>
+<li>全局预解析 所有的变量和函数都会提前，同名的变量和函数，函数会覆盖同名变量。函数提升可以将函数体也提升。</li>
+<li>函数内部的预解析 同于全局情况，但是会预解析形参。 先解析变量，在解析形参，再解析函数。也是会产生覆盖。</li>
 </ul>
-<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>原生JS中return false只能阻止默认行为，不能阻止冒泡。只能阻止btn.onclick这种方式的默认行为。不能阻止addEventListener绑定的事件。JQuery中，return false既可以阻止冒泡，也可以阻止默认行为。</p>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">obj,type,fn</span>)</span>&#123;</div><div class="line">         obj.listener=obj.listener||&#123;&#125;;</div><div class="line">         obj.listener[type]=obj.listener[type]||[];</div><div class="line">         obj.listener[type].push(fn);</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">var</span> obj=&#123;&#125;;</div><div class="line">     addEvent(obj,<span class="string">'abc'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"abc1"</span>);</div><div class="line">     &#125;);</div><div class="line">     addEvent(obj,<span class="string">'abc'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"abc2"</span>);</div><div class="line">     &#125;);</div><div class="line">     <span class="built_in">console</span>.dir(obj);</div></pre></td></tr></table></figure>
-<p>#JQ插件</p>
+<p>整体的过程是，先解析全局，执行全局，当调用函数时，解析函数内部，再执行函数。</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>作用域分为全局作用域，函数作用域，不存在块级作用域的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="keyword">var</span> a=<span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a);<span class="comment">//10</span></div></pre></td></tr></table></figure></p>
+<p>以上在大括号外也可以访问到a，所以不存在块。</p>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p>封闭的包裹，在JS中只函数的作用域。</p>
+<p>通过函数的嵌套来形成闭包，(内层函数和内层函数形成的作用域）。</p>
+<p>闭包可以延长作用域的生命周期，正常函数执行之后，函数内部的变量就会被释放，而闭包的情况下，函数内部的变量还会被其他函数调用，不会被释放。用这个特性可以缓存一些中间的状态值。</p>
 
       
 
@@ -226,7 +214,156 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/21/笔记 (4)/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/03/21/笔记 (3)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-笔记 (11)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/21/笔记 (11)/">草稿</a>
+    </h1>
+  
+
+        
+        <a href="/2016/03/21/笔记 (11)/" class="archive-article-date">
+  	<time datetime="2016-03-21T12:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h1><h2 id="学习编程注意点"><a href="#学习编程注意点" class="headerlink" title="学习编程注意点:"></a>学习编程注意点:</h2><ul>
+<li>理解</li>
+<li>总结</li>
+<li>复习<h2 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h2></li>
+</ul>
+<ol>
+<li>移动web pc网站 </li>
+<li>混合开发(原生开发Android.ios+web开发)</li>
+<li>node.js做后端 可以作为独立的技能 还有很多附加的内容 网络 服务器 数据库 作为一个专业的前端，也必须对node有了解，作为工具来使用。</li>
+<li>桌面程序 (electron) 很少作为一个独立的工作。<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1></li>
+<li>javascript 是一门编程语言</li>
+<li>javascript的运行引擎 浏览器-&gt;内核-&gt;(渲染引擎 js引擎)</li>
+<li>javascript 核心是ecma dom bom</li>
+<li>javascript对dom节点的增删改查</li>
+<li>JS数据类型 <ul>
+<li>基本类型 number string boolan null undefined</li>
+<li>引用类型 object(Array Date Math RegExp Function Object 包装类(Number String Boolean Error XMLHttpRequest ))  Math比较特别。</li>
+</ul>
+</li>
+<li>基本类型和引用类型之间的差别。存储方式不同，基本类型数据存储在stack,引用类型存储在heap堆。基本类型传递的是值，引用类型传递的是内存的地址。<h1 id="面向对象开始"><a href="#面向对象开始" class="headerlink" title="面向对象开始"></a>面向对象开始</h1><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2>程序一步一步的执行，当遇到错误时，后面的程序将不会执行。可以用try{}catch(e) 来捕获异常，当程序发生错误的时候，就会捕获错误，e就是错误，后面的程序也会继续执行。 屏蔽底层的报错细节，给用户一个更好的提示。</li>
+</ol>
+<p>e有两个常用的属性 messge错误的原因，name错误的l类型。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="keyword">try</span> &#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"has error"</span>);</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">"我不会被执行"</span>);</span></div><div class="line"><span class="javascript">        &#125;<span class="keyword">catch</span>(e)&#123;</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.dir(e);</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(e.message);</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(e.name);</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span></div><div class="line"><span class="javascript">        &#125;<span class="keyword">finally</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(无论怎么样我都会执行);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>当try的内部发生错误的时候，大括号内的代码将不会在执行，直接跳入到catch中.finally无论如何都会执行在最后。</p>
+<h2 id="访问对象属性的两种方式"><a href="#访问对象属性的两种方式" class="headerlink" title="访问对象属性的两种方式"></a>访问对象属性的两种方式</h2><p>一种是对象.属性 一种是对象[]属性，中括号里面可以放变量。</p>
+<h2 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h2><ol>
+<li>通过构造函数new </li>
+<li>对象字面量 只能创建实例 基于Objec<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">    name:zhangsan,</div><div class="line">    gender:<span class="string">'male'</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>构造函数实例化的过程中都做了 什么</p>
+<ol>
+<li>开辟内存用来存储实例中的数据</li>
+<li>用this指向当前的区域</li>
+<li>通过this向该区域存放数据</li>
+<li>返回this </li>
+</ol>
+<p>也就是说构造函数中的this指向的就是当前的实例对象。<br>实例方法中的this，指向方法的调用者，实际上就是实例对象本身。<br>构造函数虽然没有返回值，但是返回了实例，隐式返回值就是this。如果有显示返回，返回基本数据类型，那么和返回等效，返回引用类型的话，会被执行。</p>
+<p>对象的本质就是无序的键值对的集合。</p>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>在构造函数中假设存储了一个常量，那么所有的实例，都会有一个单独的这个属性，存储的是相同的内容，造成浪费，为了解决这个问题，设计了原型。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">this</span>.name=name;</span></div><div class="line"><span class="javascript">            <span class="keyword">this</span>.age=age;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> p1=<span class="keyword">new</span> Person(<span class="string">'tom'</span>,<span class="string">'13'</span>);</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> p2=<span class="keyword">new</span> Person(<span class="string">'jerry'</span>,<span class="string">'11'</span>);</span></div><div class="line"><span class="javascript">        Person.prototype.flag=<span class="literal">true</span>;</span></div><div class="line"><span class="javascript">        <span class="built_in">console</span>.log(p1.flag);<span class="comment">//true</span></span></div><div class="line"><span class="javascript">        <span class="comment">//这个属性会被共享到所有实例。</span></span></div><div class="line"><span class="javascript">        <span class="comment">//所有的函数都有原型Prototype</span></span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>prototype</strong>存在于所有构造函数实例对象中，指向构造方法的prototype指向的位置。该属性不是标准属性，也就是说虽然能被打印，但是写程序时无法进行操作，是浏览器内部使用的，自己定义的名称。<br>所有的函数都有原型Prototype,该属性本质也是对象(object的实例)。实现实例对象之间数据的共享。</p>
+<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="什么是面向对象"><a href="#什么是面向对象" class="headerlink" title="什么是面向对象?"></a>什么是面向对象?</h2><p>面向对象是一种编程模式，就是以对象的方式写代码。</p>
+<p>面向过程编程模式的缺点，团队开发容易产生命名冲突。不方便代码的重用。</p>
+<h2 id="this-的场景"><a href="#this-的场景" class="headerlink" title="this 的场景"></a>this 的场景</h2><ol>
+<li>构造函数中的this<ul>
+<li>指向实例对象.</li>
+</ul>
+</li>
+<li>原型方法中的this<ul>
+<li>指向实例对象.</li>
+</ul>
+</li>
+<li>事件函数中的this<ul>
+<li>指向绑定事件的对象dom</li>
+</ul>
+</li>
+</ol>
+<h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h1><p>typeof是一个运算符。会显示出以下几个类型</p>
+<p>number string boolean undefined object function</p>
+<p>null会显示是object </p>
+<h1 id="对象中属性的判断"><a href="#对象中属性的判断" class="headerlink" title="对象中属性的判断"></a>对象中属性的判断</h1><ul>
+<li>in 判断对象中和原型链中是否存在某个属性  </li>
+<li>hasOwnProperty()判断是否在实例对象中。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="string">'a'</span> <span class="keyword">in</span> <span class="built_in">window</span>)&#123;</div><div class="line">    <span class="keyword">var</span> a=<span class="number">123</span>;</div><div class="line">    <span class="built_in">console</span>.log(a);<span class="comment">//123 会打印出123</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>JS中全局作用域中的变量和函数都是window的属性，<br>JS中没有块级作用域，JS中存在变量提升，所以if语句判断为真。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params">info</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.info=info;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> foo=<span class="keyword">new</span> Foo(<span class="string">'hello'</span>);</div><div class="line">Foo.prototype.flage=<span class="literal">true</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'flag'</span> <span class="keyword">in</span> foo) ;<span class="comment">//ture</span></div><div class="line"><span class="built_in">console</span>.log(foo.hasOwnProperty(<span class="string">'info'</span>));<span class="comment">//false</span></div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">废稿</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/rubbish/" class="article-tag-list-link color3">rubbish</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/03/21/笔记 (11)/">展开全文 >></a>
         </p>
       
 
@@ -451,114 +588,6 @@
 
 
   
-    <article id="post-笔记 (8)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/21/笔记 (8)/">草稿</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/21/笔记 (8)/" class="archive-article-date">
-  	<time datetime="2016-03-21T12:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
-<ul>
-<li>touchstart  手指触摸 不管几个手指</li>
-<li>touchmove  手指在滑动的时候</li>
-<li>touchend  手指离开屏幕</li>
-<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>事件参数有以下几个常用属性</p>
-<ul>
-<li>changedTouches 所有改变的触摸点集合</li>
-<li>targetTouches 目标元素上所有触摸点集合</li>
-<li>touches  所有触摸点    </li>
-<li>集合内的对象内的三组坐标<ul>
-<li>client   视口的坐标    </li>
-<li>page 页面的坐标</li>
-<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>没有滑动过</li>
-<li>150ms内响应</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">废稿</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/rubbish/" class="article-tag-list-link color3">rubbish</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/21/笔记 (8)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-笔记 (7)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -641,6 +670,114 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/03/21/笔记 (7)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-笔记 (8)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/21/笔记 (8)/">草稿</a>
+    </h1>
+  
+
+        
+        <a href="/2016/03/21/笔记 (8)/" class="archive-article-date">
+  	<time datetime="2016-03-21T12:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Web-第二天"><a href="#Web-第二天" class="headerlink" title="Web 第二天"></a>Web 第二天</h1><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>移动端的事件，只有移动端才有,touch是一个事件组包含四个事件。</p>
+<ul>
+<li>touchstart  手指触摸 不管几个手指</li>
+<li>touchmove  手指在滑动的时候</li>
+<li>touchend  手指离开屏幕</li>
+<li>touchcancel 系统停止跟踪触摸时 不常用 被迫终止滑动时会触发<br>移动端的事件要用addEventListener来绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.addEventListener(&quot;touchstart&quot;,</div><div class="line">        function ()&#123;</div><div class="line">            console.log(&quot;start&quot;);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>事件参数有以下几个常用属性</p>
+<ul>
+<li>changedTouches 所有改变的触摸点集合</li>
+<li>targetTouches 目标元素上所有触摸点集合</li>
+<li>touches  所有触摸点    </li>
+<li>集合内的对象内的三组坐标<ul>
+<li>client   视口的坐标    </li>
+<li>page 页面的坐标</li>
+<li>screen 屏幕上面的坐标 包括浏览器工具栏等等<h3 id="结束事件"><a href="#结束事件" class="headerlink" title="结束事件"></a>结束事件</h3>过渡结束事件transiitionEnd ，动画结束事件animationEnd<br>这两个属性有兼容性问题，需要加私有前缀；<h3 id="tab事件"><a href="#tab事件" class="headerlink" title="tab事件"></a>tab事件</h3>tap轻触事件,封装在fastclick中，zepto中也有,移动端click会有延迟300ms,tap不会有。<br>特点是:</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>没有滑动过</li>
+<li>150ms内响应</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">废稿</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/rubbish/" class="article-tag-list-link color3">rubbish</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/03/21/笔记 (8)/">展开全文 >></a>
         </p>
       
 
@@ -1049,6 +1186,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
             
             <div class="clearfix"></div>
