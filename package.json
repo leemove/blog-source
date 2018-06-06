@@ -6,10 +6,12 @@
     "version": "3.7.1"
   },
   "dependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
-    "gulp-html": "^0.4.7",
+    "gulp-html": "^0.5.0",
     "gulp-htmlclean": "^2.7.15",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-uglify": "^3.0.0",
     "hexo": "^3.2.0",
