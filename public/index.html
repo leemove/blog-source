@@ -225,6 +225,69 @@
 
 
   
+    <article id="post-实现一个简单的事件触发器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="实现一个简单的事件发射器"><a href="#实现一个简单的事件发射器" class="headerlink" title="实现一个简单的事件发射器"></a>实现一个简单的事件发射器</h1><h2 id="事件Event"><a href="#事件Event" class="headerlink" title="事件Event"></a>事件Event</h2><p>事件是js的基础,经常用来解决各种异步问题.虽然带来了回调地狱等问题,但不可否认他是js的基础.</p>
+<p>我们这次的任务是搭建一个自己的事件系统.</p>
+<h2 id="on-注册事件"><a href="#on-注册事件" class="headerlink" title="on 注册事件"></a>on 注册事件</h2><p>onclick,onblur…这些耳熟能详的事件注册方式,都是基于一个基础的方法,<code>on</code>.</p>
+<p>定义这个类的时候,我们肯定需要一个对象来存放各种事件,并且每一个事件都可以存放许多<code>listener</code>,也就是说一个事件可以注册多个函数.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventEmitter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> () &#123;</span><br><span class="line">        <span class="comment">// 注册一个对象来存放各种事件</span></span><br><span class="line">        <span class="keyword">this</span>.eventListener = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 注册一个事件</span></span><br><span class="line"><span class="comment">     * @param &#123; string &#125; eventName 事件的名称</span></span><br><span class="line"><span class="comment">     * @param &#123; function &#125; listener 事件的处理函数</span></span><br><span class="line"><span class="comment">     * @memberof EventEmitter</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    on (eventName, listener) &#123;</span><br><span class="line">        <span class="comment">// 如果已经有改事件名称对应的数组,那么久把事件处理函数存入就可以啦</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.eventListener[eventName] || (<span class="keyword">this</span>.eventListener[eventName] = [])) &#123;</span><br><span class="line">            <span class="keyword">this</span>.eventListener[eventName].push(listener)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>每一次调用<code>on</code>我们就把<code>listener</code>放入对应的数组中,这样我们收集到了所有事件.</p>
+<h2 id="emit-触发事件"><a href="#emit-触发事件" class="headerlink" title="emit 触发事件"></a>emit 触发事件</h2><p>事件注册之后,就要进行事件触发了,这个过程在实际情况中,触发的工作很多时候是浏览器来操作的,在<code>nodejs</code>中我们可能会更多地自己去触发事件.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">emit (eventName) &#123;</span><br><span class="line">    <span class="comment">// 如果已经有linster集合,那就遍历,然后逐个调用</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.eventListener[eventName]) &#123;</span><br><span class="line">        <span class="keyword">this</span>.eventListener[eventName].forEach(<span class="function"><span class="params">listener</span> =&gt;</span> &#123;</span><br><span class="line">            listener.apply(<span class="keyword">this</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>事件的触发过程并不复杂,只是逐个调用listener就好了,但是需要注意this的指向.</p>
+<p>在浏览器中,事件调用者一般是window,而在vue中,使用指令注册的事件,this就指向组件本身了.</p>
+<h2 id="removeListener-移除"><a href="#removeListener-移除" class="headerlink" title="removeListener 移除"></a>removeListener 移除</h2><p>本身是on的逆操作,一个是存入,一个是拿出呗.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">removeListener (eventName, listener) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>.eventListener[eventName]) &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.eventListener[eventName] = <span class="keyword">this</span>.eventListener[eventName].filter(<span class="function"><span class="params">item</span> =&gt;</span> item !== listener)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="once-一次性注册"><a href="#once-一次性注册" class="headerlink" title="once 一次性注册"></a>once 一次性注册</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">once (eventName, listener) &#123;</span><br><span class="line">    <span class="comment">// 定义一个实际的listener, 内部包含了调用listener后移除的操作</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">rListener</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        listener.apply(<span class="keyword">this</span>)</span><br><span class="line">        <span class="keyword">this</span>.removeListener(eventName, rListener)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.on(eventName, rListener)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一次性注册其实并不是在emit上做手脚,而是注册一个我们定义的listener,调用一次后再移除本listener.</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventEmitter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> () &#123;</span><br><span class="line">        <span class="comment">// 注册一个对象来存放各种事件</span></span><br><span class="line">        <span class="keyword">this</span>.eventListener = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 注册一个事件</span></span><br><span class="line"><span class="comment">     * @param &#123; string &#125; eventName 事件的名称</span></span><br><span class="line"><span class="comment">     * @param &#123; function &#125; listener 事件的处理函数</span></span><br><span class="line"><span class="comment">     * @memberof EventEmitter</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    on (eventName, listener) &#123;</span><br><span class="line">        <span class="comment">// 如果已经有改事件名称对应的数组,那么久把事件处理函数存入就可以啦</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.eventListener[eventName] || (<span class="keyword">this</span>.eventListener[eventName] = [])) &#123;</span><br><span class="line">            <span class="keyword">this</span>.eventListener[eventName].push(listener)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    removeListener (eventName, listener) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.eventListener[eventName]) &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.eventListener[eventName] = <span class="keyword">this</span>.eventListener[eventName].filter(<span class="function"><span class="params">item</span> =&gt;</span> item !== listener)</span><br><span class="line">    &#125;</span><br><span class="line">    emit (eventName) &#123;</span><br><span class="line">        <span class="comment">// 如果已经有linster集合,那就遍历,然后逐个调用</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.eventListener[eventName]) &#123;</span><br><span class="line">            <span class="keyword">this</span>.eventListener[eventName].forEach(<span class="function"><span class="params">listener</span> =&gt;</span> &#123;</span><br><span class="line">                listener.apply(<span class="keyword">this</span>)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    once (eventName, listener) &#123;</span><br><span class="line">        <span class="comment">// 定义一个实际的listener, 内部包含了调用listener后移除的操作</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">rListener</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            listener.apply(<span class="keyword">this</span>)</span><br><span class="line">            <span class="keyword">this</span>.removeListener(eventName, rListener)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.on(eventName, rListener)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> EventEmitter()</span><br><span class="line"></span><br><span class="line">myEmitter.on(<span class="string">'eat'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'我开动了!'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    myEmitter.emit(<span class="string">'eat'</span>)</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<p>这是一个最单薄的事件机制的实现,缺少了一部分api和参数检测等等.但是他确足以帮助我们看穿事件的机制,也为js的异步打下基础.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/22/实现一个简单的事件触发器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack+babel的坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -858,83 +921,6 @@
 
 
   
-    <article id="post-MVC-MVVM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/04/MVC-MVVM/">MVC-MVVM</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/04/MVC-MVVM/" class="archive-article-date">
-  	<time datetime="2017-09-04T09:41:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="从前端角度探讨下MVVM-MVC"><a href="#从前端角度探讨下MVVM-MVC" class="headerlink" title="从前端角度探讨下MVVM MVC"></a>从前端角度探讨下MVVM MVC</h1><p>首先声明一点,我不敢说让你花几分钟就可以完全理解这些概念.这篇文章是我个人的理解,并不一定<code>完全正确</code>!!!欢迎指正和讨论.</p>
-<p>最近前端工程化越来越普遍完善了,面试的时候也总会被问到<code>MVC</code>,<code>MVVM</code>这类的架构名词,第一次听肯定让人很费劲,但是千万不要想得太难,其实非常非常的简单好理解,这篇文章主要会结合前端的业务场景来解释解释这些概念.</p>
-        
-          <a class="article-more-a" href="/2017/09/04/MVC-MVVM/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Angular Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/04/MVC-MVVM/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1040,19 +1026,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Angular Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">废稿</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rubbish</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">noejs koa</a>
+                <a href="javascript:void(0)" class="js-tag color2">Angular Vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1060,7 +1038,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">rubbish</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">noejs koa</a>
               </li>
              
               <li class="article-tag-list-item">
