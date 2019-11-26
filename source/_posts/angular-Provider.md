@@ -1,9 +1,10 @@
 ---
-title: angular的Provider
-date:  2018-5-1 10:39:02  
-categories: javascript angular
-tags: 
+title: 依赖注入之供应商  
+date:  2019-5-21 20:41:02  
+categories: angular
+tags: ts angular 
 ---
+
 
 # Provider
 
@@ -16,7 +17,7 @@ tags:
 1. ExistingProvider
 1. FactoryProvider
 
-<!-- more -->
+
 他负责描述和Token相关的依赖对象的创建方式,在angular中,有以下几种创建方式.
 
 1. useClass

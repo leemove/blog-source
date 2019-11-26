@@ -1,8 +1,10 @@
 ---
-title: uncurrying
-date: 2018-08-31 15:50:10
-tags: JavaScript
+title: 柯里化与反柯里化 
+date:  2019-5-25 20:41:02  
+categories: angular
+tags: ts angular 
 ---
+
 
 # uncurrying
 

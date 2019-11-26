@@ -1,13 +1,13 @@
 ---
-title: babel中esmodule和commonjs模块化标准的坑
-date:  2018-5-7 10:39:02  
-categories: javascript angular
-tags: 
+title: webpack模块化的问题 
+date:  2018-8-25 20:41:02  
+categories: webpacck
+tags: es6 webpack 
 ---
 
 # webpack封装sdk遇到的坑
 
->webpack这个工具,我只能说随缘了.
+>webpack这个工具每次使用都会遇到各种各样的问题,只能反复查资料不断的去尝试.
 <!-- more -->
 
 直接正题,坑是关于webpack+babel的
